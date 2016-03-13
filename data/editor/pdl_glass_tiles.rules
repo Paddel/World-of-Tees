@@ -1,0 +1,61 @@
+[Glass]
+Index 1
+BaseTile
+
+#random stuff
+Index 2
+Pos 0 -1 FULL
+Random 9
+
+Index 3
+Pos 0 -1 FULL
+Random 9
+
+Index 17
+Pos 0 -1 FULL
+Random 9
+
+Index 18
+Pos 0 -1 FULL
+Random 9
+
+Index 19
+Pos 0 -1 FULL
+Random 9
+
+Index 33
+Pos 0 -1 FULL
+Random 9
+
+Index 34
+Pos 0 -1 FULL
+Random 9
+
+Index 35
+Pos 0 -1 FULL
+Random 9
+
+#top
+#Index 16
+#Pos 0 -1 EMPTY
+
+#bot
+#Index 16 YFLIP
+#Pos 0 1 EMPTY
+
+[Background]
+Index 81
+BaseTile
+
+#random stuff
+Index 82
+Random 5
+
+Index 83
+Random 5
+
+Index 84
+Random 5
+
+Index 85
+Random 5

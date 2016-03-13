@@ -1,0 +1,11 @@
+
+#include "hammer.h"
+#include "gun.h"
+#include "shotgun.h"
+#include "grenade.h"
+#include "rifle.h"
+#include "dagger.h"
+#include "firerod.h"
+#include "boomerang.h"
+#include "swoshrod.h"
+#include "shuriken.h"

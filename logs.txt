@@ -1,0 +1,22 @@
+[56e528b3][client]: starting...
+[56e528b4][client/sound]: sound init successful
+[56e528b4][engine/mastersrv]: refreshing master server addresses
+[56e528b4][textrender]: loaded pFont from 'data/fonts/DejaVuSans.ttf'
+[56e528b4][textrender]: default pFont set 0836E054
+[56e528b4][]: pFont memory usage: 2097152
+[56e528b5][gameclient]: initialisation finished after 1197.21ms
+[56e528b5][client]: version 0.6 626fce9a778df4d4
+[56e528b5][engine/mastersrv]: saving addresses
+[56e528b5][]: pFont memory usage: 3145728
+[56e528b5][]: pFont memory usage: 3407872
+[56e528b5][]: pFont memory usage: 3670016
+[56e528b5][]: pFont memory usage: 4194304
+[56e528b5][]: pFont memory usage: 4456448
+[56e528b5][]: pFont memory usage: 4587520
+[56e528b7][]: pFont memory usage: 4718592
+[56e528b9][editor]: invoked
+[56e528bd][editor]: grabbing 19.883495 49.708740 0.000000 0.000000
+[56e528f6][editor]: grabbing 332.806305 299.959473 0.000000 0.000000
+[56e528f8][editor]: grabbing 246.900757 143.626831 0.000000 0.000000
+[56e528f9][editor]: invoked
+[56e52943][client]: disconnecting. reason='unknown'

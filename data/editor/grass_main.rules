@@ -1,0 +1,141 @@
+[Grass]
+Index 1
+BaseTile
+
+#top
+Index 16
+Pos 0 -1 EMPTY
+
+#right
+Index 21
+Pos 1 0 EMPTY
+
+#bottom
+Index 52
+Pos 0 1 EMPTY
+
+#left
+Index 20
+Pos -1 0 EMPTY
+
+#corner top-right
+Index 5
+Pos 0 -1 EMPTY
+Pos 1 0 EMPTY
+
+#corner top-left
+Index 4
+Pos 0 -1 EMPTY
+Pos -1 0 EMPTY
+
+#corner bottom-left
+Index 36
+Pos 0 1 EMPTY
+Pos -1 0 EMPTY
+
+#corner bottom-right
+Index 37
+Pos 0 1 EMPTY
+Pos 1 0 EMPTY
+
+#inside corner top-right
+Index 54
+Pos -1 1 EMPTY
+Pos -1 0 FULL
+Pos 0 1 FULL
+
+#inside corner top-left
+Index 53
+Pos 1 1 EMPTY
+Pos 1 0 FULL
+Pos 0 1 FULL
+
+#inside corner bottom-left
+Index 49
+Pos 1 -1 EMPTY
+Pos 1 0 FULL
+Pos 0 -1 FULL
+
+#inside corner bottom-right
+Index 48
+Pos -1 -1 EMPTY
+Pos -1 0 FULL
+Pos 0 -1 FULL
+
+#right bottom
+Index 22
+Pos -1 0 EMPTY
+Pos -1 1 FULL
+Pos 0 1 FULL
+
+#left bottom
+Index 38
+Pos 1 0 EMPTY
+Pos 1 1 FULL
+Pos 0 1 FULL
+
+#top corner right 2
+Index 33
+Pos 0 -1 EMPTY
+Pos 1 0 EMPTY
+Pos 1 1 FULL
+
+#top corner left 2
+Index 32
+Pos 0 -1 EMPTY
+Pos -1 0 EMPTY
+Pos -1 1 FULL
+
+#top water
+Index 52 YFLIP
+Pos 0 -1 WATER
+
+#right water
+Index 21
+Pos 1 0 WATER
+
+#left water
+Index 20
+Pos -1 0 WATER
+
+#corner top-right water
+Index 5
+Pos 0 -1 EMPTY
+Pos 1 0 WATER
+
+#corner top-left water
+Index 4
+Pos 0 -1 EMPTY
+Pos -1 0 WATER
+
+#corner bottom-left water
+Index 36
+Pos 0 1 WATER
+Pos -1 0 WATER
+
+#corner bottom-right water
+Index 37
+Pos 0 1 WATER
+Pos 1 0 WATER
+
+#inside corner bottom-left water
+Index 53 YFLIP
+Pos 1 -1 WATER
+Pos 1 0 FULL
+Pos 0 -1 FULL
+
+#inside corner bottom-right water
+Index 54 YFLIP
+Pos -1 -1 WATER
+Pos -1 0 FULL
+Pos 0 -1 FULL
+
+#top corner right 2 water
+Index 37 YFLIP
+Pos 0 -1 WATER
+Pos 1 0 WATER
+
+#top corner left 2 water
+Index 36 YFLIP
+Pos 0 -1 WATER
+Pos -1 0 WATER

@@ -1,0 +1,745 @@
+[53749c9c][client]: starting...
+[53749c9d][client/sound]: sound init successful
+[53749c9d][engine/mastersrv]: refreshing master server addresses
+[53749c9d][textrender]: loaded pFont from 'data/fonts/DejaVuSans.ttf'
+[53749c9d][textrender]: default pFont set 07760034
+[53749c9d][]: pFont memory usage: 2097152
+[53749c9d][gameclient]: initialisation finished after 651.60ms
+[53749c9d][client]: version 0.6 626fce9a778df4d4
+[53749c9d][engine/mastersrv]: saving addresses
+[53749c9d][]: pFont memory usage: 3145728
+[53749c9d][]: pFont memory usage: 3407872
+[53749c9e][]: pFont memory usage: 3670016
+[53749c9e][]: pFont memory usage: 4194304
+[53749c9e][]: pFont memory usage: 4456448
+[53749c9e][]: pFont memory usage: 4587520
+[53749c9f][]: pFont memory usage: 4718592
+[53749ca0][editor]: invoked
+[53749ca2][]: pFont memory usage: 4849664
+[53749cb4][editor]: loaded editor/grass_main.rules
+[53749cb6][editor]: invoked
+[53749cb7][editor]: invoked
+[53749cba][editor]: invoked
+[53749cbf][editor]: grabbing 552.664063 1546.936890 35.910095 48.292847
+[53749cd4][editor]: invoked
+[53749cd6][editor]: invoked
+[53749cd8][editor]: invoked
+[53749cda][editor]: invoked
+[53749cdc][editor]: grabbing 367.716125 520.692261 0.000000 0.000000
+[53749cde][editor]: invoked
+[53749ce3][editor]: saving to 'maps/bot.map'...
+[53749ce3][editor]: saving quads layer
+[53749ce3][editor]: saving tiles layer
+[53749ce3][editor]: saving tiles layer
+[53749ce3][editor]: saving done
+[53749ce6][editor]: grabbing 115.324272 45.732040 0.000000 0.000000
+[53749ce8][editor]: grabbing 24.854368 403.634979 0.000000 0.000000
+[53749ced][editor]: grabbing 147.137863 23.860197 0.000000 0.000000
+[53749cee][editor]: invoked
+[53749cef][editor]: saving to 'maps/bot.map'...
+[53749cef][editor]: saving quads layer
+[53749cef][editor]: saving tiles layer
+[53749cef][editor]: saving tiles layer
+[53749cef][editor]: saving done
+[53749d00][client]: disconnecting. reason='unknown'
+[53749d00][client]: connecting to '192.168.178.99:8303'
+[53749d00][client]: connected, sending info
+[53749d00][client]: loading map, map=bot wanted crc=56a5216d
+[53749d00][datafile]: loading. filename='maps/bot.map'
+[53749d00][datafile]: allocsize=660
+[53749d00][datafile]: readsize=564
+[53749d00][datafile]: swaplen=584
+[53749d00][datafile]: item_size=424
+[53749d00][datafile]: loading done. datafile='maps/bot.map'
+[53749d00][client]: loaded map 'maps/bot.map'
+[53749d00][client/network]: loading done
+[53749d01][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749d01][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749d01][datafile]: loading data index=0 size=19 uncompressed=11
+[53749d01][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749d01][datafile]: loading data index=1 size=66 uncompressed=152
+[53749d1a][editor]: grabbing 118.306793 18.889322 0.994171 0.000000
+[53749d1c][chat]: SAI [PiT]za: /pause
+[53749d1d][chat]: SAI [PiT]za: /pause
+[53749d2b][client]: prediction time reset!
+[53749d2c][client]: prediction time reset!
+[53749d2d][client]: prediction time reset!
+[53749d2e][client]: prediction time reset!
+[53749d2f][client]: prediction time reset!
+[53749d30][client]: prediction time reset!
+[53749d31][client]: prediction time reset!
+[53749d32][client]: prediction time reset!
+[53749d33][client]: prediction time reset!
+[53749d34][client]: prediction time reset!
+[53749d34][client]: disconnecting. reason='unknown'
+[53749d34][client]: offline error=''
+[53749d41][client]: disconnecting. reason='unknown'
+[53749d41][client]: connecting to '192.168.178.99:8303'
+[53749d41][client]: connected, sending info
+[53749d41][client]: loading map, map=bot wanted crc=56a5216d
+[53749d41][datafile]: loading. filename='maps/bot.map'
+[53749d41][datafile]: allocsize=660
+[53749d41][datafile]: readsize=564
+[53749d41][datafile]: swaplen=584
+[53749d41][datafile]: item_size=424
+[53749d41][datafile]: loading done. datafile='maps/bot.map'
+[53749d41][client]: loaded map 'maps/bot.map'
+[53749d41][client/network]: loading done
+[53749d41][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749d41][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749d41][datafile]: loading data index=0 size=19 uncompressed=11
+[53749d42][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749d42][datafile]: loading data index=1 size=66 uncompressed=152
+[53749d70][client]: prediction time reset!
+[53749d71][client]: prediction time reset!
+[53749d72][client]: disconnecting. reason='unknown'
+[53749d72][client]: disconnecting. reason='unknown'
+[53749d72][client]: connecting to '192.168.178.99:8303'
+[53749d72][client]: connected, sending info
+[53749d72][client]: loading map, map=bot wanted crc=56a5216d
+[53749d72][datafile]: loading. filename='maps/bot.map'
+[53749d72][datafile]: allocsize=660
+[53749d72][datafile]: readsize=564
+[53749d72][datafile]: swaplen=584
+[53749d72][datafile]: item_size=424
+[53749d72][datafile]: loading done. datafile='maps/bot.map'
+[53749d72][client]: loaded map 'maps/bot.map'
+[53749d72][client/network]: loading done
+[53749d72][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749d72][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749d72][datafile]: loading data index=0 size=19 uncompressed=11
+[53749d72][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749d73][datafile]: loading data index=1 size=66 uncompressed=152
+[53749e0e][client]: prediction time reset!
+[53749e0f][client]: prediction time reset!
+[53749e0f][client]: prediction time reset!
+[53749e10][client]: prediction time reset!
+[53749e11][client]: disconnecting. reason='unknown'
+[53749e11][client]: disconnecting. reason='unknown'
+[53749e11][client]: connecting to '192.168.178.99:8303'
+[53749e11][client]: connected, sending info
+[53749e11][client]: loading map, map=bot wanted crc=56a5216d
+[53749e11][datafile]: loading. filename='maps/bot.map'
+[53749e11][datafile]: allocsize=660
+[53749e11][datafile]: readsize=564
+[53749e11][datafile]: swaplen=584
+[53749e11][datafile]: item_size=424
+[53749e11][datafile]: loading done. datafile='maps/bot.map'
+[53749e11][client]: loaded map 'maps/bot.map'
+[53749e11][client/network]: loading done
+[53749e11][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749e11][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749e11][datafile]: loading data index=0 size=19 uncompressed=11
+[53749e12][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749e12][datafile]: loading data index=1 size=66 uncompressed=152
+[53749e20][client]: prediction time reset!
+[53749e21][client]: prediction time reset!
+[53749e22][client]: disconnecting. reason='unknown'
+[53749e22][client]: disconnecting. reason='unknown'
+[53749e22][client]: connecting to '192.168.178.99:8303'
+[53749e22][client]: connected, sending info
+[53749e22][client]: loading map, map=bot wanted crc=56a5216d
+[53749e22][datafile]: loading. filename='maps/bot.map'
+[53749e22][datafile]: allocsize=660
+[53749e22][datafile]: readsize=564
+[53749e22][datafile]: swaplen=584
+[53749e22][datafile]: item_size=424
+[53749e22][datafile]: loading done. datafile='maps/bot.map'
+[53749e22][client]: loaded map 'maps/bot.map'
+[53749e22][client/network]: loading done
+[53749e22][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749e22][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749e22][datafile]: loading data index=0 size=19 uncompressed=11
+[53749e22][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749e23][datafile]: loading data index=1 size=66 uncompressed=152
+[53749e75][client]: prediction time reset!
+[53749e76][client]: prediction time reset!
+[53749e77][client]: prediction time reset!
+[53749e78][client]: prediction time reset!
+[53749e79][client]: disconnecting. reason='unknown'
+[53749e79][client]: disconnecting. reason='unknown'
+[53749e79][client]: connecting to '192.168.178.99:8303'
+[53749e79][client]: connected, sending info
+[53749e79][client]: loading map, map=bot wanted crc=56a5216d
+[53749e79][datafile]: loading. filename='maps/bot.map'
+[53749e79][datafile]: allocsize=660
+[53749e79][datafile]: readsize=564
+[53749e79][datafile]: swaplen=584
+[53749e79][datafile]: item_size=424
+[53749e79][datafile]: loading done. datafile='maps/bot.map'
+[53749e79][client]: loaded map 'maps/bot.map'
+[53749e79][client/network]: loading done
+[53749e79][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749e79][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749e79][datafile]: loading data index=0 size=19 uncompressed=11
+[53749e79][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749e7a][datafile]: loading data index=1 size=66 uncompressed=152
+[53749e8a][client]: prediction time reset!
+[53749e8b][client]: prediction time reset!
+[53749e8c][client]: prediction time reset!
+[53749e8d][client]: prediction time reset!
+[53749e8e][client]: prediction time reset!
+[53749e8f][client]: prediction time reset!
+[53749e90][client]: prediction time reset!
+[53749e91][client]: prediction time reset!
+[53749e92][client]: prediction time reset!
+[53749e92][client]: prediction time reset!
+[53749e93][client]: disconnecting. reason='unknown'
+[53749e93][client]: offline error=''
+[53749e9f][client]: disconnecting. reason='unknown'
+[53749e9f][client]: connecting to '192.168.178.99:8303'
+[53749e9f][client]: connected, sending info
+[53749e9f][client]: loading map, map=bot wanted crc=56a5216d
+[53749e9f][datafile]: loading. filename='maps/bot.map'
+[53749e9f][datafile]: allocsize=660
+[53749e9f][datafile]: readsize=564
+[53749e9f][datafile]: swaplen=584
+[53749e9f][datafile]: item_size=424
+[53749e9f][datafile]: loading done. datafile='maps/bot.map'
+[53749e9f][client]: loaded map 'maps/bot.map'
+[53749e9f][client/network]: loading done
+[53749e9f][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749e9f][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749e9f][datafile]: loading data index=0 size=19 uncompressed=11
+[53749e9f][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749ea0][datafile]: loading data index=1 size=66 uncompressed=152
+[53749ee3][client]: prediction time reset!
+[53749ee4][client]: prediction time reset!
+[53749ee5][client]: prediction time reset!
+[53749ee6][client]: disconnecting. reason='unknown'
+[53749ee6][client]: disconnecting. reason='unknown'
+[53749ee6][client]: connecting to '192.168.178.99:8303'
+[53749ee6][client]: connected, sending info
+[53749ee6][client]: loading map, map=bot wanted crc=56a5216d
+[53749ee6][datafile]: loading. filename='maps/bot.map'
+[53749ee6][datafile]: allocsize=660
+[53749ee6][datafile]: readsize=564
+[53749ee6][datafile]: swaplen=584
+[53749ee6][datafile]: item_size=424
+[53749ee6][datafile]: loading done. datafile='maps/bot.map'
+[53749ee6][client]: loaded map 'maps/bot.map'
+[53749ee6][client/network]: loading done
+[53749ee6][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749ee6][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749ee6][datafile]: loading data index=0 size=19 uncompressed=11
+[53749ee6][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749ee7][datafile]: loading data index=1 size=66 uncompressed=152
+[53749ef1][client]: prediction time reset!
+[53749ef2][client]: prediction time reset!
+[53749ef3][client]: prediction time reset!
+[53749ef4][client]: prediction time reset!
+[53749ef5][client]: prediction time reset!
+[53749ef6][client]: prediction time reset!
+[53749ef7][client]: disconnecting. reason='unknown'
+[53749ef7][client]: disconnecting. reason='unknown'
+[53749ef7][client]: connecting to '192.168.178.99:8303'
+[53749ef7][client]: connected, sending info
+[53749ef7][client]: loading map, map=bot wanted crc=56a5216d
+[53749ef7][datafile]: loading. filename='maps/bot.map'
+[53749ef7][datafile]: allocsize=660
+[53749ef7][datafile]: readsize=564
+[53749ef7][datafile]: swaplen=584
+[53749ef7][datafile]: item_size=424
+[53749ef7][datafile]: loading done. datafile='maps/bot.map'
+[53749ef7][client]: loaded map 'maps/bot.map'
+[53749ef7][client/network]: loading done
+[53749ef7][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749ef7][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749ef7][datafile]: loading data index=0 size=19 uncompressed=11
+[53749ef7][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749ef8][datafile]: loading data index=1 size=66 uncompressed=152
+[53749efb][]: pFont memory usage: 4980736
+[53749f56][client]: prediction time reset!
+[53749f57][client]: prediction time reset!
+[53749f58][client]: prediction time reset!
+[53749f59][client]: prediction time reset!
+[53749f59][client]: disconnecting. reason='unknown'
+[53749f5a][client]: disconnecting. reason='unknown'
+[53749f5a][client]: connecting to '192.168.178.99:8303'
+[53749f5a][client]: connected, sending info
+[53749f5a][client]: loading map, map=bot wanted crc=56a5216d
+[53749f5a][datafile]: loading. filename='maps/bot.map'
+[53749f5a][datafile]: allocsize=660
+[53749f5a][datafile]: readsize=564
+[53749f5a][datafile]: swaplen=584
+[53749f5a][datafile]: item_size=424
+[53749f5a][datafile]: loading done. datafile='maps/bot.map'
+[53749f5a][client]: loaded map 'maps/bot.map'
+[53749f5a][client/network]: loading done
+[53749f5a][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749f5a][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749f5a][datafile]: loading data index=0 size=19 uncompressed=11
+[53749f5a][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749f5a][datafile]: loading data index=1 size=66 uncompressed=152
+[53749f5f][client]: prediction time reset!
+[53749f60][client]: prediction time reset!
+[53749fc9][client]: prediction time reset!
+[53749fca][client]: prediction time reset!
+[53749fcb][client]: prediction time reset!
+[53749fcb][client]: disconnecting. reason='unknown'
+[53749fcb][client]: disconnecting. reason='unknown'
+[53749fcb][client]: connecting to '192.168.178.99:8303'
+[53749fcb][client]: connected, sending info
+[53749fcb][client]: loading map, map=bot wanted crc=56a5216d
+[53749fcb][datafile]: loading. filename='maps/bot.map'
+[53749fcb][datafile]: allocsize=660
+[53749fcb][datafile]: readsize=564
+[53749fcb][datafile]: swaplen=584
+[53749fcb][datafile]: item_size=424
+[53749fcb][datafile]: loading done. datafile='maps/bot.map'
+[53749fcb][client]: loaded map 'maps/bot.map'
+[53749fcb][client/network]: loading done
+[53749fcb][datafile]: loading data index=2 size=224 uncompressed=10000
+[53749fcb][datafile]: loading data index=3 size=439 uncompressed=10000
+[53749fcb][datafile]: loading data index=0 size=19 uncompressed=11
+[53749fcc][chat]: *** 'SAI [PiT]za' entered and joined the game
+[53749fcc][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a076][client]: prediction time reset!
+[5374a077][client]: prediction time reset!
+[5374a078][client]: prediction time reset!
+[5374a079][client]: prediction time reset!
+[5374a079][client]: disconnecting. reason='unknown'
+[5374a079][client]: disconnecting. reason='unknown'
+[5374a079][client]: connecting to '192.168.178.99:8303'
+[5374a079][client]: connected, sending info
+[5374a079][client]: loading map, map=bot wanted crc=56a5216d
+[5374a079][datafile]: loading. filename='maps/bot.map'
+[5374a079][datafile]: allocsize=660
+[5374a079][datafile]: readsize=564
+[5374a079][datafile]: swaplen=584
+[5374a079][datafile]: item_size=424
+[5374a079][datafile]: loading done. datafile='maps/bot.map'
+[5374a079][client]: loaded map 'maps/bot.map'
+[5374a079][client/network]: loading done
+[5374a079][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a079][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a079][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a07a][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a07a][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a09c][client]: disconnecting. reason='unknown'
+[5374a09c][client]: disconnecting. reason='unknown'
+[5374a09c][client]: connecting to '192.168.178.99:8303'
+[5374a09c][client]: connected, sending info
+[5374a09c][client]: loading map, map=bot wanted crc=56a5216d
+[5374a09c][datafile]: loading. filename='maps/bot.map'
+[5374a09c][datafile]: allocsize=660
+[5374a09c][datafile]: readsize=564
+[5374a09c][datafile]: swaplen=584
+[5374a09c][datafile]: item_size=424
+[5374a09c][datafile]: loading done. datafile='maps/bot.map'
+[5374a09c][client]: loaded map 'maps/bot.map'
+[5374a09c][client/network]: loading done
+[5374a09c][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a09c][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a09c][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a09d][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a09d][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a09f][client]: prediction time reset!
+[5374a0a0][client]: prediction time reset!
+[5374a0a1][client]: prediction time reset!
+[5374a0a2][client]: prediction time reset!
+[5374a0a3][client]: disconnecting. reason='unknown'
+[5374a0a3][client]: disconnecting. reason='unknown'
+[5374a0a3][client]: connecting to '192.168.178.99:8303'
+[5374a0a3][client]: connected, sending info
+[5374a0a3][client]: loading map, map=bot wanted crc=56a5216d
+[5374a0a3][datafile]: loading. filename='maps/bot.map'
+[5374a0a3][datafile]: allocsize=660
+[5374a0a3][datafile]: readsize=564
+[5374a0a3][datafile]: swaplen=584
+[5374a0a3][datafile]: item_size=424
+[5374a0a3][datafile]: loading done. datafile='maps/bot.map'
+[5374a0a3][client]: loaded map 'maps/bot.map'
+[5374a0a3][client/network]: loading done
+[5374a0a3][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a0a3][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a0a3][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a0a4][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a0a4][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a149][chat]: *** 'Artich' entered and joined the game
+[5374a161][client]: prediction time reset!
+[5374a162][client]: disconnecting. reason='unknown'
+[5374a162][client]: disconnecting. reason='unknown'
+[5374a162][client]: connecting to '192.168.178.99:8303'
+[5374a162][client]: connected, sending info
+[5374a162][client]: loading map, map=bot wanted crc=56a5216d
+[5374a162][datafile]: loading. filename='maps/bot.map'
+[5374a162][datafile]: allocsize=660
+[5374a162][datafile]: readsize=564
+[5374a162][datafile]: swaplen=584
+[5374a162][datafile]: item_size=424
+[5374a162][datafile]: loading done. datafile='maps/bot.map'
+[5374a162][client]: loaded map 'maps/bot.map'
+[5374a162][client/network]: loading done
+[5374a162][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a162][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a162][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a162][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a163][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a198][chat]: *** 'Jim' entered and joined the game
+[5374a1b5][chat]: *** 'Jim' has left the game (You have been banned for life (No reason given))
+[5374a263][client]: prediction time reset!
+[5374a264][client]: prediction time reset!
+[5374a265][client]: prediction time reset!
+[5374a266][client]: prediction time reset!
+[5374a267][client]: prediction time reset!
+[5374a268][client]: prediction time reset!
+[5374a269][client]: prediction time reset!
+[5374a26a][client]: prediction time reset!
+[5374a26b][client]: prediction time reset!
+[5374a26c][client]: prediction time reset!
+[5374a26c][client]: disconnecting. reason='unknown'
+[5374a26c][client]: offline error=''
+[5374a274][client]: disconnecting. reason='unknown'
+[5374a274][client]: connecting to '192.168.178.99:8303'
+[5374a274][client]: connected, sending info
+[5374a274][client]: loading map, map=bot wanted crc=56a5216d
+[5374a274][datafile]: loading. filename='maps/bot.map'
+[5374a274][datafile]: allocsize=660
+[5374a274][datafile]: readsize=564
+[5374a274][datafile]: swaplen=584
+[5374a274][datafile]: item_size=424
+[5374a274][datafile]: loading done. datafile='maps/bot.map'
+[5374a274][client]: loaded map 'maps/bot.map'
+[5374a274][client/network]: loading done
+[5374a274][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a274][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a274][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a274][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a274][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a2fe][client]: prediction time reset!
+[5374a2ff][client]: prediction time reset!
+[5374a300][client]: prediction time reset!
+[5374a301][client]: prediction time reset!
+[5374a302][client]: prediction time reset!
+[5374a303][client]: prediction time reset!
+[5374a303][client]: disconnecting. reason='unknown'
+[5374a303][client]: disconnecting. reason='unknown'
+[5374a303][client]: connecting to '192.168.178.99:8303'
+[5374a303][client]: connected, sending info
+[5374a303][client]: loading map, map=bot wanted crc=56a5216d
+[5374a303][datafile]: loading. filename='maps/bot.map'
+[5374a303][datafile]: allocsize=660
+[5374a303][datafile]: readsize=564
+[5374a303][datafile]: swaplen=584
+[5374a303][datafile]: item_size=424
+[5374a303][datafile]: loading done. datafile='maps/bot.map'
+[5374a303][client]: loaded map 'maps/bot.map'
+[5374a303][client/network]: loading done
+[5374a303][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a303][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a303][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a304][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a304][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a314][client]: prediction time reset!
+[5374a315][client]: prediction time reset!
+[5374a316][client]: prediction time reset!
+[5374a317][client]: prediction time reset!
+[5374a318][client]: prediction time reset!
+[5374a319][client]: prediction time reset!
+[5374a31a][client]: prediction time reset!
+[5374a31a][client]: disconnecting. reason='unknown'
+[5374a31a][client]: disconnecting. reason='unknown'
+[5374a31a][client]: connecting to '192.168.178.99:8303'
+[5374a31a][client]: connected, sending info
+[5374a31a][client]: loading map, map=bot wanted crc=56a5216d
+[5374a31a][datafile]: loading. filename='maps/bot.map'
+[5374a31a][datafile]: allocsize=660
+[5374a31a][datafile]: readsize=564
+[5374a31a][datafile]: swaplen=584
+[5374a31a][datafile]: item_size=424
+[5374a31a][datafile]: loading done. datafile='maps/bot.map'
+[5374a31a][client]: loaded map 'maps/bot.map'
+[5374a31a][client/network]: loading done
+[5374a31a][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a31a][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a31a][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a31b][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a31b][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a383][client]: prediction time reset!
+[5374a384][client]: prediction time reset!
+[5374a385][client]: prediction time reset!
+[5374a386][client]: prediction time reset!
+[5374a386][client]: prediction time reset!
+[5374a387][client]: disconnecting. reason='unknown'
+[5374a387][client]: disconnecting. reason='unknown'
+[5374a387][client]: connecting to '192.168.178.99:8303'
+[5374a387][client]: connected, sending info
+[5374a387][client]: loading map, map=bot wanted crc=56a5216d
+[5374a387][datafile]: loading. filename='maps/bot.map'
+[5374a387][datafile]: allocsize=660
+[5374a387][datafile]: readsize=564
+[5374a387][datafile]: swaplen=584
+[5374a387][datafile]: item_size=424
+[5374a387][datafile]: loading done. datafile='maps/bot.map'
+[5374a387][client]: loaded map 'maps/bot.map'
+[5374a387][client/network]: loading done
+[5374a387][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a387][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a387][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a388][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a388][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a4bc][client]: prediction time reset!
+[5374a4bd][client]: prediction time reset!
+[5374a4be][client]: prediction time reset!
+[5374a4bf][client]: prediction time reset!
+[5374a4c0][client]: disconnecting. reason='unknown'
+[5374a4c0][client]: disconnecting. reason='unknown'
+[5374a4c0][client]: connecting to '192.168.178.99:8303'
+[5374a4c0][client]: connected, sending info
+[5374a4c0][client]: loading map, map=bot wanted crc=56a5216d
+[5374a4c0][datafile]: loading. filename='maps/bot.map'
+[5374a4c0][datafile]: allocsize=660
+[5374a4c0][datafile]: readsize=564
+[5374a4c0][datafile]: swaplen=584
+[5374a4c0][datafile]: item_size=424
+[5374a4c0][datafile]: loading done. datafile='maps/bot.map'
+[5374a4c0][client]: loaded map 'maps/bot.map'
+[5374a4c0][client/network]: loading done
+[5374a4c0][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a4c0][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a4c0][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a4c1][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a4c1][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a599][client]: prediction time reset!
+[5374a59a][client]: prediction time reset!
+[5374a59b][client]: prediction time reset!
+[5374a59c][client]: disconnecting. reason='unknown'
+[5374a59c][client]: disconnecting. reason='unknown'
+[5374a59c][client]: connecting to '192.168.178.99:8303'
+[5374a59c][client]: connected, sending info
+[5374a59c][client]: loading map, map=bot wanted crc=56a5216d
+[5374a59c][datafile]: loading. filename='maps/bot.map'
+[5374a59c][datafile]: allocsize=660
+[5374a59c][datafile]: readsize=564
+[5374a59c][datafile]: swaplen=584
+[5374a59c][datafile]: item_size=424
+[5374a59c][datafile]: loading done. datafile='maps/bot.map'
+[5374a59c][client]: loaded map 'maps/bot.map'
+[5374a59c][client/network]: loading done
+[5374a59c][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a59c][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a59c][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a59d][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a59d][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a639][client]: prediction time reset!
+[5374a639][client]: prediction time reset!
+[5374a63a][client]: prediction time reset!
+[5374a63b][client]: prediction time reset!
+[5374a63c][client]: prediction time reset!
+[5374a63d][client]: prediction time reset!
+[5374a63e][client]: prediction time reset!
+[5374a63f][client]: prediction time reset!
+[5374a640][client]: prediction time reset!
+[5374a641][client]: prediction time reset!
+[5374a642][client]: disconnecting. reason='unknown'
+[5374a642][client]: offline error=''
+[5374a651][client]: disconnecting. reason='unknown'
+[5374a651][client]: connecting to '192.168.178.99:8303'
+[5374a651][client]: connected, sending info
+[5374a651][client]: loading map, map=bot wanted crc=56a5216d
+[5374a651][datafile]: loading. filename='maps/bot.map'
+[5374a651][datafile]: allocsize=660
+[5374a651][datafile]: readsize=564
+[5374a651][datafile]: swaplen=584
+[5374a651][datafile]: item_size=424
+[5374a651][datafile]: loading done. datafile='maps/bot.map'
+[5374a651][client]: loaded map 'maps/bot.map'
+[5374a651][client/network]: loading done
+[5374a651][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a651][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a651][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a652][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a652][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a668][client]: prediction time reset!
+[5374a669][client]: prediction time reset!
+[5374a66a][client]: prediction time reset!
+[5374a66a][client]: disconnecting. reason='unknown'
+[5374a66a][client]: disconnecting. reason='unknown'
+[5374a66a][client]: connecting to '192.168.178.99:8303'
+[5374a66a][client]: connected, sending info
+[5374a66a][client]: loading map, map=bot wanted crc=56a5216d
+[5374a66a][datafile]: loading. filename='maps/bot.map'
+[5374a66a][datafile]: allocsize=660
+[5374a66a][datafile]: readsize=564
+[5374a66a][datafile]: swaplen=584
+[5374a66a][datafile]: item_size=424
+[5374a66a][datafile]: loading done. datafile='maps/bot.map'
+[5374a66a][client]: loaded map 'maps/bot.map'
+[5374a66a][client/network]: loading done
+[5374a66a][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a66a][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a66a][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a66b][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a66b][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a70c][client]: prediction time reset!
+[5374a70d][client]: prediction time reset!
+[5374a70e][client]: prediction time reset!
+[5374a70f][client]: prediction time reset!
+[5374a710][client]: prediction time reset!
+[5374a711][client]: prediction time reset!
+[5374a712][client]: prediction time reset!
+[5374a712][client]: disconnecting. reason='unknown'
+[5374a712][client]: disconnecting. reason='unknown'
+[5374a712][client]: connecting to '192.168.178.99:8303'
+[5374a712][client]: connected, sending info
+[5374a712][client]: loading map, map=bot wanted crc=56a5216d
+[5374a712][datafile]: loading. filename='maps/bot.map'
+[5374a712][datafile]: allocsize=660
+[5374a712][datafile]: readsize=564
+[5374a712][datafile]: swaplen=584
+[5374a712][datafile]: item_size=424
+[5374a712][datafile]: loading done. datafile='maps/bot.map'
+[5374a712][client]: loaded map 'maps/bot.map'
+[5374a712][client/network]: loading done
+[5374a712][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a712][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a712][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a713][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a713][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a71e][client]: prediction time reset!
+[5374a71f][client]: prediction time reset!
+[5374a71f][client]: disconnecting. reason='unknown'
+[5374a71f][client]: disconnecting. reason='unknown'
+[5374a71f][client]: connecting to '192.168.178.99:8303'
+[5374a71f][client]: connected, sending info
+[5374a71f][client]: loading map, map=bot wanted crc=56a5216d
+[5374a71f][datafile]: loading. filename='maps/bot.map'
+[5374a71f][datafile]: allocsize=660
+[5374a71f][datafile]: readsize=564
+[5374a71f][datafile]: swaplen=584
+[5374a71f][datafile]: item_size=424
+[5374a71f][datafile]: loading done. datafile='maps/bot.map'
+[5374a71f][client]: loaded map 'maps/bot.map'
+[5374a71f][client/network]: loading done
+[5374a71f][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a71f][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a71f][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a720][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a720][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a727][client]: prediction time reset!
+[5374a728][client]: disconnecting. reason='unknown'
+[5374a729][client]: disconnecting. reason='unknown'
+[5374a729][client]: connecting to '192.168.178.99:8303'
+[5374a729][client]: connected, sending info
+[5374a729][client]: loading map, map=bot wanted crc=56a5216d
+[5374a729][datafile]: loading. filename='maps/bot.map'
+[5374a729][datafile]: allocsize=660
+[5374a729][datafile]: readsize=564
+[5374a729][datafile]: swaplen=584
+[5374a729][datafile]: item_size=424
+[5374a729][datafile]: loading done. datafile='maps/bot.map'
+[5374a729][client]: loaded map 'maps/bot.map'
+[5374a729][client/network]: loading done
+[5374a729][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a729][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a729][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a729][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a729][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a73a][client]: prediction time reset!
+[5374a73b][client]: prediction time reset!
+[5374a73c][client]: disconnecting. reason='unknown'
+[5374a73c][client]: disconnecting. reason='unknown'
+[5374a73c][client]: connecting to '192.168.178.99:8303'
+[5374a73c][client]: connected, sending info
+[5374a73c][client]: loading map, map=bot wanted crc=56a5216d
+[5374a73c][datafile]: loading. filename='maps/bot.map'
+[5374a73c][datafile]: allocsize=660
+[5374a73c][datafile]: readsize=564
+[5374a73c][datafile]: swaplen=584
+[5374a73c][datafile]: item_size=424
+[5374a73c][datafile]: loading done. datafile='maps/bot.map'
+[5374a73c][client]: loaded map 'maps/bot.map'
+[5374a73c][client/network]: loading done
+[5374a73c][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a73c][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a73c][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a73d][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a73d][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a758][client]: prediction time reset!
+[5374a759][client]: disconnecting. reason='unknown'
+[5374a759][client]: disconnecting. reason='unknown'
+[5374a759][client]: connecting to '192.168.178.99:8303'
+[5374a759][client]: connected, sending info
+[5374a759][client]: loading map, map=bot wanted crc=56a5216d
+[5374a759][datafile]: loading. filename='maps/bot.map'
+[5374a759][datafile]: allocsize=660
+[5374a759][datafile]: readsize=564
+[5374a759][datafile]: swaplen=584
+[5374a759][datafile]: item_size=424
+[5374a759][datafile]: loading done. datafile='maps/bot.map'
+[5374a759][client]: loaded map 'maps/bot.map'
+[5374a759][client/network]: loading done
+[5374a759][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a759][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a759][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a75a][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a75a][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a7ed][client]: prediction time reset!
+[5374a7ee][client]: prediction time reset!
+[5374a7ef][client]: prediction time reset!
+[5374a7f0][client]: prediction time reset!
+[5374a7f1][client]: prediction time reset!
+[5374a7f1][client]: prediction time reset!
+[5374a7f2][client]: prediction time reset!
+[5374a7f3][client]: prediction time reset!
+[5374a7f4][client]: prediction time reset!
+[5374a7f5][client]: prediction time reset!
+[5374a7f6][client]: disconnecting. reason='unknown'
+[5374a7f6][client]: offline error=''
+[5374a84b][client]: disconnecting. reason='unknown'
+[5374a84b][client]: connecting to '192.168.178.99:8303'
+[5374a84b][client]: connected, sending info
+[5374a84b][client]: loading map, map=bot wanted crc=56a5216d
+[5374a84b][datafile]: loading. filename='maps/bot.map'
+[5374a84b][datafile]: allocsize=660
+[5374a84b][datafile]: readsize=564
+[5374a84b][datafile]: swaplen=584
+[5374a84b][datafile]: item_size=424
+[5374a84b][datafile]: loading done. datafile='maps/bot.map'
+[5374a84b][client]: loaded map 'maps/bot.map'
+[5374a84b][client/network]: loading done
+[5374a84b][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a84b][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a84b][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a84b][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a84c][datafile]: loading data index=1 size=66 uncompressed=152
+[5374a874][client]: prediction time reset!
+[5374a875][client]: prediction time reset!
+[5374a876][client]: prediction time reset!
+[5374a877][client]: prediction time reset!
+[5374a877][client]: prediction time reset!
+[5374a878][client]: disconnecting. reason='unknown'
+[5374a878][client]: disconnecting. reason='unknown'
+[5374a878][client]: connecting to '192.168.178.99:8303'
+[5374a878][client]: connected, sending info
+[5374a878][client]: loading map, map=bot wanted crc=56a5216d
+[5374a878][datafile]: loading. filename='maps/bot.map'
+[5374a878][datafile]: allocsize=660
+[5374a878][datafile]: readsize=564
+[5374a878][datafile]: swaplen=584
+[5374a878][datafile]: item_size=424
+[5374a878][datafile]: loading done. datafile='maps/bot.map'
+[5374a878][client]: loaded map 'maps/bot.map'
+[5374a878][client/network]: loading done
+[5374a878][datafile]: loading data index=2 size=224 uncompressed=10000
+[5374a878][datafile]: loading data index=3 size=439 uncompressed=10000
+[5374a878][datafile]: loading data index=0 size=19 uncompressed=11
+[5374a879][chat]: *** 'SAI [PiT]za' entered and joined the game
+[5374a879][datafile]: loading data index=1 size=66 uncompressed=152
+[5374aa19][chat]: *** '\|ar17\|ar' entered and joined the game
+[5374aa1c][chat]: \|ar17\|ar: /d
+[5374aa2b][chat]: *** '\|ar17\|ar' has left the game (You have been banned for life (No reason given))
+[5374aa60][chat]: *** '(1)SAI [PiT]za' entered and joined the game
+[5374aa73][client]: prediction time reset!
+[5374aa74][client]: prediction time reset!
+[5374aa75][client]: prediction time reset!
+[5374aa76][client]: prediction time reset!
+[5374aa77][client]: prediction time reset!
+[5374aa78][client]: prediction time reset!
+[5374aa79][client]: prediction time reset!
+[5374aa7a][client]: prediction time reset!
+[5374aa7b][client]: prediction time reset!
+[5374aa7c][client]: prediction time reset!
+[5374aa7c][client]: disconnecting. reason='unknown'
+[5374aa7c][client]: offline error=''

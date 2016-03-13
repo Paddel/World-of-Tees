@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="1024"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="smoke.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3755">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.39215687;"
+         offset="0"
+         id="stop3757" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3759" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3755"
+       id="radialGradient3763"
+       cx="444.99997"
+       cy="570.4762"
+       fx="444.99997"
+       fy="570.4762"
+       r="279.28571"
+       gradientTransform="matrix(1.6701473,-1.2980559e-7,6.4215418e-8,0.82622949,-71.072696,47.891821)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3755"
+       id="radialGradient3765"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.37114385,-5.284444e-8,1.4270093e-8,0.33636176,-81.603456,-262.60765)"
+       cx="444.99997"
+       cy="570.4762"
+       fx="444.99997"
+       fy="570.4762"
+       r="279.28571" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3755"
+       id="radialGradient3769"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.37114385,-1.20101e-8,1.4270093e-8,0.07644585,-81.603456,27.690124)"
+       cx="444.99997"
+       cy="570.4762"
+       fx="444.99997"
+       fy="570.4762"
+       r="279.28571" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="235.36759"
+     inkscape:cy="1430.2031"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-bbox="true"
+     inkscape:window-width="779"
+     inkscape:window-height="423"
+     inkscape:window-x="263"
+     inkscape:window-y="246"
+     inkscape:window-maximized="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3771"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingx="32px"
+       spacingy="32px" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-28.362183)">
+    <rect
+       style="fill:url(#radialGradient3765);fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="rect2985"
+       width="211.11111"
+       height="156.44444"
+       x="-22"
+       y="-227.63782"
+       inkscape:export-filename="C:\Users\Paddel\Desktop\Sourcen\Dropbox\#Mod-Base(RPG)\data\mapres\smoke.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       y="35.637817"
+       x="-22"
+       height="35.555557"
+       width="211.11111"
+       id="rect3767"
+       style="fill:url(#radialGradient3769);fill-opacity:1;fill-rule:evenodd;stroke:none"
+       transform="scale(1,-1)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="C:\Users\Paddel\Desktop\Sourcen\Dropbox\#Mod-Base(RPG)\data\mapres\smoke.png" />
+  </g>
+</svg>

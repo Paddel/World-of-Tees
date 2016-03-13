@@ -1,0 +1,133 @@
+[Ice]
+Index 1
+BaseTile
+
+#randoms
+Index 16
+Pos 1 0 FULL
+Pos 0 -1 FULL
+Pos 0 1 FULL
+Pos -1 0 FULL
+Random 230
+
+Index 17
+Pos 1 0 FULL
+Pos 0 -1 FULL
+Pos 0 1 FULL
+Pos -1 0 FULL
+Random 230
+
+Index 18
+Pos 1 0 FULL
+Pos 0 -1 FULL
+Pos 0 1 FULL
+Pos -1 0 FULL
+Random 230
+
+Index 19
+Pos 1 0 FULL
+Pos 0 -1 FULL
+Pos 0 1 FULL
+Pos -1 0 FULL
+Random 230
+
+Index 21
+Pos -1 0 Index 20
+
+#top
+Index 2
+Pos 0 -1 EMPTY
+
+Index 3
+Pos 0 -1 EMPTY
+Random 2
+
+#right
+Index 6
+Pos 1 0 EMPTY
+
+#bottom
+Index 9
+Pos 0 1 EMPTY
+
+#left
+Index 6 XFLIP
+Pos -1 0 EMPTY
+
+#corner top-right
+Index 8
+Pos 0 -1 EMPTY
+Pos 1 0 EMPTY
+
+Index 7 XFLIP
+Pos 0 -1 EMPTY
+Pos 1 0 EMPTY
+Random 2
+
+#corner top-left
+Index 8 XFLIP
+Pos 0 -1 EMPTY
+Pos -1 0 EMPTY
+
+Index 7
+Pos 0 -1 EMPTY
+Pos -1 0 EMPTY
+Random 2
+
+#corner bottom-left
+Index 10 XFLIP
+Pos 0 1 EMPTY
+Pos -1 0 EMPTY
+
+#corner bottom-right
+Index 10
+Pos 0 1 EMPTY
+Pos 1 0 EMPTY
+
+#inside corner top-right
+Index 11
+Pos -1 1 EMPTY
+Pos -1 0 FULL
+Pos 0 1 FULL
+
+#inside corner top-left
+Index 11 XFLIP
+Pos 1 1 EMPTY
+Pos 1 0 FULL
+Pos 0 1 FULL
+
+#inside corner bottom-left
+Index 4 XFLIP
+Pos 1 -1 EMPTY
+Pos 1 0 FULL
+Pos 0 -1 FULL
+
+#inside corner bottom-right
+Index 4
+Pos -1 -1 EMPTY
+Pos -1 0 FULL
+Pos 0 -1 FULL
+
+#right bottom
+Index 5
+Pos -1 0 EMPTY
+Pos -1 1 FULL
+Pos 0 1 FULL
+
+#left bottom
+Index 5 XFLIP
+Pos 1 0 EMPTY
+Pos 1 1 FULL
+Pos 0 1 FULL
+
+#top corner right 2
+Index 12 XFLIP
+Pos 0 -1 EMPTY
+Pos 1 0 EMPTY
+Pos 1 1 FULL
+
+#top corner left 2
+Index 12
+Pos 0 -1 EMPTY
+Pos -1 0 EMPTY
+Pos -1 1 FULL

@@ -1,0 +1,176 @@
+[Winter]
+Index 1
+BaseTile
+
+#top
+Index 17
+Pos 0 -1 EMPTY
+
+Index 18
+Pos 0 -1 EMPTY
+Pos -1 0 INDEX 17
+
+Index 19
+Pos 0 -1 EMPTY
+Pos -1 0 INDEX 18
+
+#bottom
+Index 97
+Pos 0 1 EMPTY
+
+Index 98
+Pos 0 1 EMPTY
+Pos -1 0 INDEX 97
+
+Index 99
+Pos 0 1 EMPTY
+Pos -1 0 INDEX 98
+
+#right
+Index 2 XFLIP
+Pos 1 0 EMPTY
+
+#left
+Index 2
+Pos -1 0 EMPTY
+
+#corner top right
+Index 20
+Pos 0 -1 EMPTY
+Pos 1 0 EMPTY
+
+Index 24
+Pos 0 -1 EMPTY
+Pos 1 0 EMPTY
+Pos -1 0 INDEX 17
+
+#corner top left
+Index 16
+Pos 0 -1 EMPTY
+Pos -1 0 EMPTY
+
+#corner bottom right
+Index 100
+Pos 0 1 EMPTY
+Pos 1 0 EMPTY
+
+#corner bottom left
+Index 96
+Pos 0 1 EMPTY
+Pos -1 0 EMPTY
+
+#inside corner top right
+Index 8
+Pos 0 1 FULL
+Pos -1 0 FULL
+Pos -1 1 EMPTY
+
+#inside corner top left
+Index 7
+Pos 0 1 FULL
+Pos 1 0 FULL
+Pos 1 1 EMPTY
+
+#inside corner bottom right
+Index 4
+Pos 0 -1 FULL
+Pos -1 0 FULL
+Pos -1 -1 EMPTY
+
+#inside corner bottom left
+Index 3
+Pos 0 -1 FULL
+Pos 1 0 FULL
+Pos 1 -1 EMPTY
+
+#one tile height
+Index 113
+Pos 0 1 EMPTY
+Pos 0 -1 EMPTY
+
+Index 114
+Pos 0 1 EMPTY
+Pos 0 -1 EMPTY
+Pos -1 0 INDEX 113
+
+Index 115
+Pos 0 1 EMPTY
+Pos 0 -1 EMPTY
+Pos -1 0 INDEX 114
+
+#one tile height right
+Index 116
+Pos 0 1 EMPTY
+Pos 0 -1 EMPTY
+Pos 1 0 EMPTY
+
+Index 120
+Pos 0 1 EMPTY
+Pos 0 -1 EMPTY
+Pos 1 0 EMPTY
+Pos -1 0 INDEX 113
+
+#one tile height left
+Index 112
+Pos 0 1 EMPTY
+Pos 0 -1 EMPTY
+Pos -1 0 EMPTY
+
+#one tile height link right
+Index 6
+Pos -1 -1 EMPTY
+Pos -1 0 FULL
+Pos 0 -1 FULL
+Pos -1 1 EMPTY
+
+#one tile height link left
+Index 5
+Pos 1 -1 EMPTY
+Pos 1 0 FULL
+Pos 0 -1 FULL
+Pos 1 1 EMPTY
+
+#top water
+Index 90
+Pos 0 -1 WATER
+
+#right water
+Index 2 XFLIP
+Pos 1 0 WATER
+
+#left water
+Index 2
+Pos -1 0 WATER
+
+#corner top-right water
+Index 20
+Pos 0 -1 EMPTY
+Pos 1 0 WATER
+
+#corner top-left water
+Index 16
+Pos 0 -1 EMPTY
+Pos -1 0 WATER
+
+#inside corner bottom-left water
+Index 93
+Pos 1 -1 WATER
+Pos 1 0 FULL
+Pos 0 -1 FULL
+
+#inside corner bottom-right water
+Index 93 XFLIP
+Pos -1 -1 WATER
+Pos -1 0 FULL
+Pos 0 -1 FULL
+
+#top corner right 2 water
+Index 87 XFLIP
+Pos 0 -1 WATER
+Pos 1 0 WATER
+
+#top corner left 2 water
+Index 87
+Pos 0 -1 WATER
+Pos -1 0 WATER
+
