@@ -1,0 +1,39 @@
+[56e57b3b][server]: starting...
+[56e57b3b][Database]: Creating connection.
+[56e57b3b][Database]: Connected
+[56e57b3b][server]: server name is 'World of Tees - Srv #1'
+[56e57b3b][server]: version 0.6 626fce9a778df4d4
+[56e57b3b][Maploader]: Map 'wot_town_church' added as default map.
+[56e57b3b][Maploader]: Map 'wot_town_street_main' added.
+[56e57b3c][Maploader]: Map 'wot_grass_west' added.
+[56e57b3c][Maploader]: Map 'wot_grass_east' added.
+[56e57b3c][server]: Finished loading map!
+[56e57b3c][engine/mastersrv]: refreshing master server addresses
+[56e57b3c][register]: refreshing ip addresses
+[56e57b3c][engine/mastersrv]: saving addresses
+[56e57b3c][register]: fetching server counts
+[56e57b3f][register]: chose 'master2.teeworlds.com' as master, sending heartbeats
+[56e57b3f][server]: ClientID=0 passed spoofprotection
+[56e57b3f][server]: player is ready. ClientID=0 addr=192.168.178.57:64282
+[56e57b40][server]: '[15:37]' -> '[15:37]'
+[56e57b40][server]: player has entered the game. ClientID=0 addr=192.168.178.57:64282
+[56e57b40][chat]: *** '[15:37]' entered and joined the game
+[56e57b40][game]: team_join player='0:[15:37]' team=0
+[56e57b44][server]: player is ready. ClientID=0 addr=192.168.178.57:64282
+[56e57b44][register]: no firewall/nat problems detected
+[56e57b44][register]: server registered
+[56e57b53][server]: player is ready. ClientID=0 addr=192.168.178.57:64282
+[56e57b53][server]: '[15:38]' -> '[15:38]'
+[56e57b5b][Automap]: loaded editor/grass_main.rules
+[56e57b5b][generator]: saving to 'maps/generated/gen_1547.map'...
+[56e57b5c][generator]: saving done
+[56e57b5c][Maploader]: Map 'gen_1547' added.
+[56e57b5d][server]: player is ready. ClientID=0 addr=192.168.178.57:64282
+[56e57b84][server]: '[15:39]' -> '[15:39]'
+[56e57b84][chat]: *** '[15:38]' changed name to '[15:39]'
+[56e57bc0][server]: '[15:40]' -> '[15:40]'
+[56e57bc0][chat]: *** '[15:39]' changed name to '[15:40]'
+[56e57bfc][server]: '[15:41]' -> '[15:41]'
+[56e57bfc][chat]: *** '[15:40]' changed name to '[15:41]'
+[56e57c38][server]: '[15:42]' -> '[15:42]'
+[56e57c38][chat]: *** '[15:41]' changed name to '[15:42]'

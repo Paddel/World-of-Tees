@@ -760,7 +760,7 @@ void CEnemyNpc::TargetInput()
 		m_aTimes[TIME_TAR_COL_CHECK] = Server()->Tick()+Server()->TickSpeed();
 	}
 
-	if(m_pTarget->IsEnemy(this) == false)
+	if(m_pTarget && m_pTarget->IsEnemy(this) == false)
 		ResetEnemy(m_pTarget);
 }
 
