@@ -1,3 +1,9 @@
+*.exe
+logs.txt
+.bam
+objs
+compile_out.txt
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
