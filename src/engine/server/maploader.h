@@ -28,6 +28,7 @@ private:
 	int m_Temperature;
 	int m_Moisture;
 	int m_Eruption;
+	int m_TicketLevel;
 	bool m_LastActive;
 
 	int LoadMapFile();
@@ -69,6 +70,7 @@ public:
 	int GetMapMoisture() const { return m_Moisture; }
 	int GetMapBiome() const { return m_MapBiome; }
 	int GetMapEruption() const { return m_Eruption; }
+	int GetMapTicketLevel() const { return m_TicketLevel; }
 
 	CMapLoader *MapLoader() const { return m_pMapLoader; }
 	IServer *Server() const { return m_pServer; }

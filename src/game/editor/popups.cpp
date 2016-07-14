@@ -791,6 +791,27 @@ int CEditor::PopupMapInfo(CEditor *pEditor, CUIRect View)
 
 		str_format(aBuf, sizeof(aBuf), "Eruption: %i", pEditor->m_Map.m_MapInfo.m_Eruption);
 		pEditor->UI()->DoLabel(&Label, aBuf, 12.0f, -1, -1);
+
+		Button.HSplitTop(16.0f, 0, &Button);
+		Button.HSplitTop(12.0f, &Button, 0);
+		Button.VSplitLeft(Width*0.3f, &Label, &View);
+
+		if (pEditor->UI()->MouseInside(&Label))
+		{
+			if (pEditor->Input()->KeyPressed(KEY_MOUSE_WHEEL_UP))
+			{
+				pEditor->m_Map.m_MapInfo.m_TicketLevel = clamp(pEditor->m_Map.m_MapInfo.m_TicketLevel + 1, 0, 5);
+				pEditor->m_ZoomLevel += 20;
+			}
+			else if (pEditor->Input()->KeyPressed(KEY_MOUSE_WHEEL_DOWN))
+			{
+				pEditor->m_Map.m_MapInfo.m_TicketLevel = clamp(pEditor->m_Map.m_MapInfo.m_TicketLevel - 1, 0, 5);
+				pEditor->m_ZoomLevel -= 20;
+			}
+		}
+
+		str_format(aBuf, sizeof(aBuf), "TicketLevel: %i", pEditor->m_Map.m_MapInfo.m_TicketLevel);
+		pEditor->UI()->DoLabel(&Label, aBuf, 12.0f, -1, -1);
 	}
 
 	// button bar
@@ -1090,7 +1111,7 @@ int CEditor::PopupExtInp(CEditor *pEditor, CUIRect View)
 		}
 
 
-		str_format(aArgStr, sizeof(aArgStr), "%s%c%c%s%s", aArgStr[0]?aArgStr:"", Indicator, 0xff, aVal, i==Size-1?"":"\xff");
+		str_fcat(aArgStr, sizeof(aArgStr), "%c%c%s%s", Indicator, 0xff, aVal, i==Size-1?"":"\xff");
 	}
 
 	if(str_comp(pExTile->m_ExArgs, aArgStr) != 0)
@@ -1103,16 +1124,16 @@ static char s_aChestContent[512];
 
 static void ChestShowBaseFunc(void *pInfo, int Size, int CoolDown)
 {
-	str_format(s_aChestContent, sizeof(s_aChestContent), "%sSize: %i\nCooldown: %i\n\nContent:\n", s_aChestContent[0]?s_aChestContent:"", Size, CoolDown);
+	str_fcat(s_aChestContent, sizeof(s_aChestContent), "Size: %i\nCooldown: %i\n\nContent:\n", Size, CoolDown);
 }
 
 static void ChestShowDropFunc(void *pInfo, char *pType, int Num, char *pExtraInfo, int ClientID)
 {
 	char aNew[300];
 	str_format(aNew, sizeof(aNew), "%i %s", Num, pType);
-	str_format(s_aChestContent, sizeof(s_aChestContent), "%s%s", s_aChestContent[0]?s_aChestContent:"", aNew);
+	str_fcat(s_aChestContent, sizeof(s_aChestContent), "%s", aNew);
 
-	str_format(s_aChestContent, sizeof(s_aChestContent), "%s     %s\n", s_aChestContent, pExtraInfo?pExtraInfo:"");
+	str_fcat(s_aChestContent, sizeof(s_aChestContent), "     %s\n", pExtraInfo?pExtraInfo:"");
 }
 
 int CEditor::PopupChestContent(CEditor *pEditor, CUIRect View)
@@ -1151,7 +1172,7 @@ int CEditor::PopupChestContent(CEditor *pEditor, CUIRect View)
 
 	if(s_LastSelectedChest != s_SelectedChest)
 	{
-		s_aChestContent[0] = 0;
+		mem_zero(&s_aChestContent, sizeof(s_aChestContent));
 		s_aChests[s_SelectedChest].Drop(ChestShowBaseFunc, ChestShowDropFunc, pEditor);
 	}
 

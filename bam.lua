@@ -226,14 +226,19 @@ function build(settings)
 			client_settings.link.libs:Add("GL")
 			client_settings.link.libs:Add("GLU")
 		end
+		
 
 	elseif family == "windows" then
 		client_settings.link.libs:Add("opengl32")
 		client_settings.link.libs:Add("glu32")
 		client_settings.link.libs:Add("winmm")
+	end
 
-		server_settings.link.libpath:Add("other/mysql/lib")
+	server_settings.link.libpath:Add("other/mysql/lib")
+	if family == "windows" then
 		server_settings.link.libs:Add("libmysql")
+	else
+		server_settings.link.libs:Add("mysqlclient")
 	end
 
 	-- apply sdl settings

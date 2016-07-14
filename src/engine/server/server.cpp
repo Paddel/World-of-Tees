@@ -1217,9 +1217,9 @@ void CServer::SendServerInfo(const NETADDR *pAddr, int Token)
 	p.AddString(aBuf, 2);
 
 	str_format(aBuf, sizeof(aBuf), "%d", PlayerCount==m_NetServer.MaxClients()?VANILLA_MAX_CLIENTS:min(PlayerCount, 15)); p.AddString(aBuf, 3); // num players
-	str_format(aBuf, sizeof(aBuf), "%d", min(m_NetServer.MaxClients(), VANILLA_MAX_CLIENTS)-g_Config.m_SvSpectatorSlots); p.AddString(aBuf, 3); // max players
+	str_format(aBuf, sizeof(aBuf), "%d", min(m_NetServer.MaxClients(), (int)VANILLA_MAX_CLIENTS)-g_Config.m_SvSpectatorSlots); p.AddString(aBuf, 3); // max players
 	str_format(aBuf, sizeof(aBuf), "%d", ClientCount==m_NetServer.MaxClients()?VANILLA_MAX_CLIENTS:min(ClientCount, 15)); p.AddString(aBuf, 3); // num clients
-	str_format(aBuf, sizeof(aBuf), "%d", min(m_NetServer.MaxClients(), VANILLA_MAX_CLIENTS)); p.AddString(aBuf, 3); // max clients
+	str_format(aBuf, sizeof(aBuf), "%d", min(m_NetServer.MaxClients(), (int)VANILLA_MAX_CLIENTS)); p.AddString(aBuf, 3); // max clients
 
 	for(i = 0; i < VANILLA_MAX_CLIENTS; i++)
 	{

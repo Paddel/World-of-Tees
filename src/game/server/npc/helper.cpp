@@ -138,9 +138,9 @@ void CHelper::Tick()
 					{
 						str_format(aBuf, sizeof(aBuf), "%s: If you need help, just hammer me!", Server()->ClientName(i));
 						if(rand()%24 == 0)
-							str_format(aBuf, sizeof(aBuf), "%s 8====D", aBuf);
+							str_fcat(aBuf, sizeof(aBuf), " 8====D");
 						else
-							str_format(aBuf, sizeof(aBuf), "%s <3", aBuf);
+							str_fcat(aBuf, sizeof(aBuf), " <3");
 
 						int PlayerItemID = GameServer()->m_World.GetPlayerItemId(this, Map());
 

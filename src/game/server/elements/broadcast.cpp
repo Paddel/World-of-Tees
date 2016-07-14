@@ -101,27 +101,27 @@ void CBroadcast::BroadAddExpBar(char *pStr, int ClientID)
 	CPlayer *pPlayer = GameServer()->m_apPlayers[ClientID];
 	if(!pPlayer)
 		return;
-	int MaxNum = 15;
+	static const int s_MaxNum = 15;
 	float a = (float)pPlayer->AccountInfo()->m_Experience/Character_NeededExperience(pPlayer->AccountInfo()->m_Level);
-	int num = a*MaxNum;
+	int num = a*s_MaxNum;
 	char aBarTop[64];
 	char aBarBot[64];
 
 	//top
 	str_format(aBarTop, sizeof(aBarTop), "%s", ExpTopLeft);
 	for(int i = 0; i < num; i++)
-		str_format(aBarTop, sizeof(aBarTop), "%s%s", aBarTop, ExpTopMidFull);
-	for(int i = 0; i < MaxNum-num; i++)
-		str_format(aBarTop, sizeof(aBarTop), "%s%s", aBarTop, ExpTopMidEmpty);
-	str_format(aBarTop, sizeof(aBarTop), "%s%s", aBarTop, ExpTopRight);
+		str_fcat(aBarTop, sizeof(aBarTop), "%s", ExpTopMidFull);
+	for(int i = 0; i < s_MaxNum -num; i++)
+		str_fcat(aBarTop, sizeof(aBarTop), "%s", ExpTopMidEmpty);
+	str_fcat(aBarTop, sizeof(aBarTop), "%s", ExpTopRight);
 
 	//bot
 	str_format(aBarBot, sizeof(aBarBot), "%s", ExpBotLeft);
 	for(int i = 0; i < num; i++)
-		str_format(aBarBot, sizeof(aBarBot), "%s%s", aBarBot, ExpBotMidFull);
-	for(int i = 0; i < MaxNum-num; i++)
-		str_format(aBarBot, sizeof(aBarBot), "%s%s", aBarBot, ExpBotMidEmpty);
-	str_format(aBarBot, sizeof(aBarBot), "%s%s", aBarBot, ExpBotRight);
+		str_fcat(aBarBot, sizeof(aBarBot), "%s", ExpBotMidFull);
+	for(int i = 0; i < s_MaxNum -num; i++)
+		str_fcat(aBarBot, sizeof(aBarBot), "%s", ExpBotMidEmpty);
+	str_fcat(aBarBot, sizeof(aBarBot), "%s", ExpBotRight);
 
 	BroadAddStr(pStr, aBarTop);
 	BroadAddStr(pStr, aBarBot);
@@ -208,9 +208,9 @@ void CBroadcast::BroadAddBreeth(char *pStr, int ClientID)
 		return;
 
 	for(int i = 0; i < pChr->GetBreeth(); i++)
-		str_format(aBreethStr, sizeof(aBreethStr), "%s%s", aBreethStr[0]?aBreethStr:"", "o");
+		str_fcat(aBreethStr, sizeof(aBreethStr), "%s", "o");
 	for(int i = 0; i < MAX_BREETH-pChr->GetBreeth(); i++)
-		str_format(aBreethStr, sizeof(aBreethStr), "%s%s", aBreethStr[0]?aBreethStr:"", "x");
+		str_fcat(aBreethStr, sizeof(aBreethStr), "%s", "x");
 
 	BroadAddStr(pStr, aBreethStr);
 }
@@ -242,5 +242,5 @@ void CBroadcast::BroadAddShift(char *pStr, int ClientID)
 
 void CBroadcast::BroadAddStr(char *pStr, char *pAdd)
 {
-	str_format(pStr, MAX_BROADCAST_STRING, "%s%s%s", pStr[0]?pStr:"", pStr[0]?"\n":"", pAdd);
+	str_fcat(pStr, MAX_BROADCAST_STRING, "%s%s", pStr[0]?"\n":"", pAdd);
 }

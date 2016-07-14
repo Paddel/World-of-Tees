@@ -3954,7 +3954,7 @@ int CEditor::PopupMenuFile(CEditor *pEditor, CUIRect View)
 		if (pEditor->m_aFileName[0] && pEditor->m_ValidSaveFilename)
 			pGenPrevName = pEditor->m_aFileName;
 
-		CPrevMapInfo MapInfo = CPrevMapInfo(pGenPrevName, 0, pEditor->m_Map.m_MapInfo.m_Eruption, pEditor->m_Map.m_MapInfo.m_Temperature, pEditor->m_Map.m_MapInfo.m_Moisture);
+		CPrevMapInfo MapInfo = CPrevMapInfo(pGenPrevName, 0, pEditor->m_Map.m_MapInfo.m_Eruption, pEditor->m_Map.m_MapInfo.m_Temperature, pEditor->m_Map.m_MapInfo.m_Moisture, pEditor->m_Map.m_MapInfo.m_TicketLevel);
 		pEditor->m_Generator.Generate("gen_editor", MapInfo);
 		return 1;
 	}
@@ -4370,7 +4370,7 @@ void CEditor::Init()
 void CEditor::RegisterExtendetTiles()
 {
 	//RegisterExtendInput(EXTILE_TEST, "Test", "i;Testint;5;s;TestStr;blub");
-	RegisterExtendInput(EXTILE_MAPTRANSITION_FROM, "Map-Transition from", "s;Mapname;wot_;i;ID;0;i;Hammer needed;0;i;Ticket lvl;0");
+	RegisterExtendInput(EXTILE_MAPTRANSITION_FROM, "Map-Transition from", "s;Mapname;wot_;i;ID;0;i;Hammer needed;0;i;Ticket lvl;1");
 	RegisterExtendInput(EXTILE_MAPTRANSITION_TO, "Map-Transition to", "i;ID;0");
 	RegisterExtendInput(EXTILE_NPC_HELPER, "Npc Helper", "i;ID;0");
 	RegisterExtendInput(EXTILE_HEAL_STONE, "Heal Stone", "i;Height;1");

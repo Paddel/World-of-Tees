@@ -1568,6 +1568,25 @@ int str_length(const char *str)
 	return (int)strlen(str);
 }
 
+void str_fcat(char *buffer, int buffer_size, const char *format, ...)
+{
+	int len = str_length(buffer);
+
+#if defined(CONF_FAMILY_WINDOWS)
+	va_list ap;
+	va_start(ap, format);
+	_vsnprintf(buffer + len, buffer_size - len, format, ap);
+	va_end(ap);
+#else
+	va_list ap;
+	va_start(ap, format);
+	vsnprintf(buffer + len, buffer_size - len, format, ap);
+	va_end(ap);
+#endif
+
+	buffer[buffer_size - 1] = 0; /* assure null termination */
+}
+
 void str_format(char *buffer, int buffer_size, const char *format, ...)
 {
 #if defined(CONF_FAMILY_WINDOWS)
@@ -2020,92 +2039,91 @@ int media_load(const char *pFileName)
 	int Return = 0;
 	char aStr[300];
 
-	#ifndef CONF_FAMILY_WINDOWS
-		return 0;
-	#endif
+	#ifdef CONF_FAMILY_WINDOWS
 
 	str_format(aStr, sizeof(aStr), "open \"%s\"", pFileName);
     Return = mciSendString(aStr, NULL, 0, NULL);
 
 	if(Return == 0 || Return == 265)//265 == already loaded
 		return 1;
-	else
+	#endif
 		return 0;
 }
 
 int media_play(const char *pFileName)
 {
 	char aStr[300];
-	#ifndef CONF_FAMILY_WINDOWS
-		return 0;
-	#endif
+	#ifdef CONF_FAMILY_WINDOWS
 
 	if(media_load(pFileName) == 0)
 		return 0;
 
 	str_format(aStr, sizeof(aStr), "play \"%s\"", pFileName);
     mciSendString(aStr, NULL, 0, NULL);//check return value if smth doesnt work
+	#endif
 	return 1;
 }
 
 int media_pause(const char *pFileName)
 {
-	#ifndef CONF_FAMILY_WINDOWS
-		return 0;
-	#endif
+	#ifdef CONF_FAMILY_WINDOWS
 
 	char Str[128];
 	str_format(Str, sizeof(Str), "pause \"%s\"", pFileName);
     mciSendString(Str, NULL, 0, NULL);
+	#endif
 	return 1;
 }
 
 int media_resume(const char *pFileName)
 {
 	char aStr[300];
-	#ifndef CONF_FAMILY_WINDOWS
-		return 0;
-	#endif
+	#ifdef CONF_FAMILY_WINDOWS
 
 	str_format(aStr, sizeof(aStr), "play \"%s\"", pFileName);
     mciSendString(aStr, NULL, 0, NULL);//check return value if smth doesnt work
+	#endif
 	return 1;
 }
 
 int media_close(const char *pFileName)
 {
 	char aStr[300];
-	#ifndef CONF_FAMILY_WINDOWS
-		return 0;
-	#endif
+	#ifdef CONF_FAMILY_WINDOWS
 
 	str_format(aStr, sizeof(aStr), "close \"%s\"", pFileName);
     mciSendString(aStr, NULL, 0, NULL);//check return value if smth doesnt work
+	#endif
 	return 1;
 }
 
 int media_pos_get(const char *pFileName)
 {
+	#ifdef CONF_FAMILY_WINDOWS
 	char aPosStr[128];
 	char aStr[300];
 	str_format(aStr, sizeof(aStr), "status \"%s\" position", pFileName);
 	mciSendString(aStr, aPosStr, sizeof(aPosStr), NULL);
 
 	if(aPosStr[0])
-		return atoi(aPosStr);;
+		return atoi(aPosStr);
+	#endif
 
 	return 0;
 }
 
 void media_pos_set(const char *pFileName, int Time)
 {
+	#ifdef CONF_FAMILY_WINDOWS
 	char aStr[300];
 	str_format(aStr, sizeof(aStr), "seek \"%s\" to %i", pFileName, Time);
 	mciSendString(aStr, NULL, 0, NULL);
+	#endif
 }
 
 int media_length(const char *pFileName)
 {
+	#ifdef CONF_FAMILY_WINDOWS
 	char aPosStr[128];
 	char aStr[300];
 	str_format(aStr, sizeof(aStr), "status \"%s\" length", pFileName);
@@ -2113,19 +2131,17 @@ int media_length(const char *pFileName)
 
 	if(aPosStr[0])
 		return atoi(aPosStr);
-
+	#endif
 	return 1;
 }
 
 void media_setvolume(const char *pFileName, int value)
 {
 	char aStr[300];
-	#ifndef CONF_FAMILY_WINDOWS
-		return 0;
-	#endif
-
+	#ifdef CONF_FAMILY_WINDOWS
 	str_format(aStr, sizeof(aStr), "setaudio \"%s\" output volume to %i", pFileName, value);
 	mciSendString(aStr, NULL, 0, NULL);
+	#endif
 }
 
 int create_http_socket()

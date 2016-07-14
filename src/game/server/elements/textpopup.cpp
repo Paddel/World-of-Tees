@@ -194,8 +194,9 @@ void CTextPopup::SendPopup()
 
 void CTextPopup::CreatePopupText(char *pStr, int Size, CPage *pPage)
 {
-	str_format(pStr, Size, "Page %i/%i\n", m_CurrentPage+1, m_pPages.size());
-	str_format(pStr, Size, "%s---------------------------------------------------\n", pStr);
+	mem_zero(pStr, Size);
+	str_fcat(pStr, Size, "Page %i/%i\n", m_CurrentPage+1, m_pPages.size());
+	str_fcat(pStr, Size, "---------------------------------------------------\n");
 
 	{
 		char aText[MAX_TEXT_LENGTH];
@@ -212,29 +213,29 @@ void CTextPopup::CreatePopupText(char *pStr, int Size, CPage *pPage)
 				if(pPage->m_aDecision[i].m_Line == CurLine)
 				{
 					if(pPage->m_CurrentDecision == i)
-						str_format(pStr, Size, "%s-> ", pStr);
+						str_fcat(pStr, Size, "-> ");
 					else
-						str_format(pStr, Size, "%so ", pStr);
+						str_fcat(pStr, Size, "o ");
 				}
 			}
 
-			str_format(pStr, Size, "%s%s\n", pStr, pLine);
+			str_fcat(pStr, Size, "%s\n", pLine);
 			CurLine++;
 		}
 	}
 
 	for(int i = 0; i < pPage->LineSkips(); i++)
-		str_format(pStr, Size, "%s\n", pStr);
+		str_fcat(pStr, Size, "\n");
 
-	str_format(pStr, Size, "%s---------------------------------------------------\n", pStr);
+	str_fcat(pStr, Size, "---------------------------------------------------\n");
 	if(pPage->NumDecisions())
 	{
-		str_format(pStr, Size, "%s Move right/left change selection\n", pStr);
-		str_format(pStr, Size, "%s Jump to select\n", pStr);
+		str_fcat(pStr, Size, " Move right/left change selection\n");
+		str_fcat(pStr, Size, " Jump to select\n");
 	}
 	else
 	{
-		str_format(pStr, Size, "%s Fire/Hook to turn over Page\n", pStr);
-		str_format(pStr, Size, "%s\n", pStr);
+		str_fcat(pStr, Size, " Fire/Hook to turn over Page\n");
+		str_fcat(pStr, Size, "\n");
 	}
 }

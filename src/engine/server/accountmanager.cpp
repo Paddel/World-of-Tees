@@ -1,4 +1,6 @@
 
+#include <stdio.h>
+
 #include <base/system.h>
 #include <engine/server.h>
 #include <game/server/playerinfo.h>
@@ -8,7 +10,7 @@
 #include "accountmanager.h"
 
 #define QUERY_MAX_STR_LEN 512
-#define SCHEMA_NAME "worldoftees"
+#define SCHEMA_NAME "wot"
 
 CAccountManager::CAccountManager() : CDatabase()
 {
@@ -17,7 +19,7 @@ CAccountManager::CAccountManager() : CDatabase()
 bool CAccountManager::Init(IServer *pServer)
 {
 	m_pServer = pServer;
-	CDatabase::Init(pServer, "localhost", "root", "poseidon", SCHEMA_NAME);
+	CDatabase::Init(pServer, "78.47.53.206", "taschenrechner", "hades", SCHEMA_NAME);
 
 	return GetConnected();
 }
@@ -240,7 +242,7 @@ void CAccountManager::AddQueryStr(char *pDest, char *pStr)
 void CAccountManager::AddQueryInt(char *pDest, int Val)
 {
 	char aBuf[128];
-	itoa(Val, aBuf, 10);
+	sprintf(aBuf, "%d", Val);
 	strcat(pDest, "\"");
 	strcat(pDest, aBuf);
 	strcat(pDest, "\"");

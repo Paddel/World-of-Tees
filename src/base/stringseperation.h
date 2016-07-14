@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <stdlib.h>
 #include <base/system.h>
 //using namespace std;
 
@@ -56,10 +57,10 @@ static int GetSepInt(char SepChar, char **content)
 		return -1;
 
 	//Check chars
-	for(unsigned int i = 0; i < strlen(pNumStr); i++)
+	for(int i = 0; i < str_length(pNumStr); i++)
 	{
 		bool check = false;
-		for(unsigned int a = 0; a < strlen(Nums); a++)
+		for(int a = 0; a < str_length(Nums); a++)
 		{
 			if(pNumStr[i] == Nums[a])
 			{//char is available

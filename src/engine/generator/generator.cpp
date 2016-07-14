@@ -81,15 +81,16 @@ int CGenerator::Save(class IStorage *pStorage, CGeneratingMap *pMap)
 			CMapItemInfoEx Item;
 			Item.m_Version = 2;
 
-			Item.m_Author = df.AddData(str_length("Paddel") + 1, "Paddel");
+			Item.m_Author = df.AddData(str_length("Paddel") + 1, (void *)"Paddel");
 			Item.m_MapVersion = -1;
-			Item.m_Credits = df.AddData(str_length("-") + 1, "-");
-			Item.m_License = df.AddData(str_length("GPLv3") + 1, "GPLv3");
+			Item.m_Credits = df.AddData(str_length("-") + 1, (void *)"-");
+			Item.m_License = df.AddData(str_length("GPLv3") + 1, (void *)"GPLv3");
 
 			Item.m_MapType = pMap->m_MapType;
 			Item.m_Temperature = pMap->m_Temperature;
 			Item.m_Moisture = pMap->m_Moisture;
 			Item.m_Eruption = pMap->m_Eruption;
+			Item.m_TicketLevel = pMap->m_TicketLevel;
 
 			df.AddItem(MAPITEMTYPE_INFO, 0, sizeof(Item), &Item);
 		}
@@ -585,9 +586,9 @@ int CGenerator::GenerateSpecialChunk(CGeneratingMap& GenMap, CGenLayerGroup *pGr
 	else if (Percent < 100)//98 - 99 = 2%
 		Rarity = 2;
 
-	if (Rarity == 2)
+	if (Rarity == 2 && GenMap.m_TicketLevel > 1)
 		return GenerateSpecialChunkRare(GenMap, pGroup, pLayer, ChunkFrom, ChunkTo, Chunksremaining);
-	else if (Rarity == 1)
+	else if (Rarity == 1 && GenMap.m_TicketLevel > 0)
 		return GenerateSpecialChunkMedium(GenMap, pGroup, pLayer, ChunkFrom, ChunkTo, Chunksremaining);
 	else
 		return GenerateSpecialChunkNormal(GenMap, pGroup, pLayer, ChunkFrom, ChunkTo, Chunksremaining);
@@ -1003,6 +1004,7 @@ void CGenerator::SetMapInfo(CGeneratingMap& GenMap)
 	GenMap.m_Temperature = ClampTemp(GenMap.m_PrevMapInfo.m_Temperature + ((rand() % 11) - 5) * 6);
 	GenMap.m_Moisture = ClampMoisture(GenMap.m_PrevMapInfo.m_Moisture + ((rand() % 11) - 5) * 6);
 	GenMap.m_MapBiome = CalculateBiome(GenMap.m_Temperature, GenMap.m_Moisture);
+	GenMap.m_TicketLevel = GenMap.m_PrevMapInfo.m_TicketLevel;
 }
 
 void CGenerator::GeneratePara0(CGeneratingMap& GenMap)

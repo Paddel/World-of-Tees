@@ -48,7 +48,7 @@ void CTicketSeller::BuyTicket(int ClientID)
 		Msg.m_Team = 0;
 		Msg.m_ClientID = PlayerItemID;
 		Msg.m_pMessage = aBuf;
-		GameServer()->Server()->SendPackMsg(&Msg, MSGFLAG_VITAL, ClientID);
+		Server()->SendChaMsgBot(&Msg, MSGFLAG_VITAL, ClientID);
 		return;
 	}
 
@@ -60,7 +60,7 @@ void CTicketSeller::BuyTicket(int ClientID)
 		Msg.m_Team = 0;
 		Msg.m_ClientID = PlayerItemID;
 		Msg.m_pMessage = aBuf;
-		GameServer()->Server()->SendPackMsg(&Msg, MSGFLAG_VITAL, ClientID);
+		Server()->SendChaMsgBot(&Msg, MSGFLAG_VITAL, ClientID);
 		CanBuy = false;
 	}
 
@@ -71,7 +71,7 @@ void CTicketSeller::BuyTicket(int ClientID)
 		Msg.m_Team = 0;
 		Msg.m_ClientID = PlayerItemID;
 		Msg.m_pMessage = aBuf;
-		GameServer()->Server()->SendPackMsg(&Msg, MSGFLAG_VITAL, ClientID);
+		Server()->SendChaMsgBot(&Msg, MSGFLAG_VITAL, ClientID);
 		CanBuy = false;
 	}
 
@@ -85,7 +85,7 @@ void CTicketSeller::BuyTicket(int ClientID)
 	Msg.m_Team = 0;
 	Msg.m_ClientID = PlayerItemID;
 	Msg.m_pMessage = "Thank you and have fun the the other parts of the town!";
-	GameServer()->Server()->SendPackMsg(&Msg, MSGFLAG_VITAL, ClientID);
+	Server()->SendChaMsgBot(&Msg, MSGFLAG_VITAL, ClientID);
 }
 
 void CTicketSeller::BuyTicketStatic(void *pInfo, int ClientID)

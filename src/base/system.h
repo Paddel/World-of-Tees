@@ -759,6 +759,9 @@ void str_copy(char *dst, const char *src, int dst_size);
 */
 int str_length(const char *str);
 
+
+void str_fcat(char *buffer, int buffer_size, const char *format, ...);
+
 /*
 	Function: str_format
 		Performs printf formating into a buffer.

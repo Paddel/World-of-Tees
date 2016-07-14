@@ -5,7 +5,7 @@
 #include <engine/shared/network.h>
 #include <game/server/playerinfo.h>
 
-#include <windows.h>
+//#include <windows.h>
 
 #include "locator.h"
 
@@ -82,7 +82,7 @@ char * CLocator::EscapeStr(const char * From)
     unsigned long Len = str_length(From);
     unsigned long DestLen = Len * 4;
     char * Result = new char[DestLen + 1];
-    memset(Result, 0, DestLen + 1);
+    mem_zero(Result, DestLen + 1);
         
     unsigned long Char;
     const char * Text = From;

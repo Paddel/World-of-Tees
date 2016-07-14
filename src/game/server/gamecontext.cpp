@@ -542,7 +542,7 @@ void CGameContext::CreateWeaponString(CWeapon *pWeapon, char *pStr, int Size)
 {
 	str_format(pStr, Size, "type=%s,dmg=%i", s_aWeaponShortcuts[pWeapon->GetType()], pWeapon->Damage());
 	if(pWeapon->MaxAmmo() > 0)
-		str_format(pStr, Size, "%s,ammo=%i", pStr, pWeapon->Ammo());
+		str_fcat(pStr, Size, ",ammo=%i", pWeapon->Ammo());
 }
 
 CWeapon *CGameContext::CreateWeaponByString(char *pStr)

@@ -65,6 +65,7 @@ int CEditorMap::Save(class IStorage *pStorage, const char *pFileName)
 			Item.m_Temperature = m_MapInfo.m_Temperature;
 			Item.m_Moisture = m_MapInfo.m_Moisture;
 			Item.m_Eruption = m_MapInfo.m_Eruption;
+			Item.m_TicketLevel = m_MapInfo.m_TicketLevel;
 
 			df.AddItem(MAPITEMTYPE_INFO, 0, sizeof(Item), &Item);
 		}
@@ -331,6 +332,7 @@ int CEditorMap::Load(class IStorage *pStorage, const char *pFileName, int Storag
 				m_MapInfo.m_Temperature = pItemEx->m_Temperature;
 				m_MapInfo.m_Moisture = pItemEx->m_Moisture;
 				m_MapInfo.m_Eruption = pItemEx->m_Eruption;
+				m_MapInfo.m_TicketLevel = pItemEx->m_TicketLevel;
 
 				m_pEditor->m_UseExMapInfo = true;
 			}

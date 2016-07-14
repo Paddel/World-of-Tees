@@ -156,13 +156,14 @@ void CChatCommands::CmdList(class CGameContext *pGameServer, int ClientID, char 
 	CChatCommands *pCmds = &pGameServer->m_ChatCommands;
 
 	char aCmdList[1024];
+	mem_zero(&aCmdList, sizeof(aCmdList));
 	strcpy(aCmdList, "Commands: ");
 	for(int i = 0; i < pCmds->m_AllCommands.size(); i++)
 	{
 		if(pCmds->m_AllCommands[i].m_Visible == false)
 			continue;
 
-		str_format(aCmdList, sizeof(aCmdList), "%s%s%s", aCmdList[0]?aCmdList:"", pCmds->m_AllCommands[i].m_aName, (i!=pCmds->m_AllCommands.size()-1)?", ":"");
+		str_fcat(aCmdList, sizeof(aCmdList), "%s%s", pCmds->m_AllCommands[i].m_aName, (i!=pCmds->m_AllCommands.size()-1)?", ":"");
 	}
 
 	pGameServer->SendChatTarget(ClientID, aCmdList);
@@ -211,7 +212,7 @@ void CChatCommands::Whisper(class CGameContext *pGameServer, int ClientID, char 
 		if(NumTargets || str_length(pTargetName) >= 16)
 			break;
 
-		str_format(pTargetName, 16, "%s %s", pTargetName, GetSepStr(' ', &pArgs));
+		str_fcat(pTargetName, 16, " %s", GetSepStr(' ', &pArgs));
 	}
 
 	if(pGameServer->Server()->ClientIngame(TargetID) == false)

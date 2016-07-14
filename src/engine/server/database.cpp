@@ -1,11 +1,17 @@
 
 #define DB_CONNECTION_BAD 0
 
+#include <stdio.h>
+
 #include <base/system.h>
 #include <engine/server.h>
 
-#include <WinSock.h>
+#if defined(CONF_FAMILY_WINDOWS)
+#include "winsock2.h"
+#endif
+
 #include <mysql.h>
+
 
 #include "database.h"
 

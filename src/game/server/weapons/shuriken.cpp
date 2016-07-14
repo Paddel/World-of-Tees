@@ -9,7 +9,7 @@
 
 
 CShuriken::CShuriken(CGameContext *pGameServer, CTargetAble *pOwner, int Damage)
-	: CWeapon(pGameServer, pOwner, WEAP_SWOSHROD, Damage, 250)
+	: CWeapon(pGameServer, pOwner, WEAP_SHURIKEN, Damage, 250)
 {
 	static const int NumSnapIDs = sizeof(m_aSnapIDs)/sizeof(m_aSnapIDs[0]);
 	for(int i = 0; i < NumSnapIDs; i++)

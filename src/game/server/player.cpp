@@ -433,8 +433,8 @@ bool CPlayer::FillSavingInfos()
 			continue;
 
 		GameServer()->CreateWeaponString(pWeapon, aBuf, sizeof(aBuf));
-		str_format(AccountInfo()->m_aWeaponString, sizeof(AccountInfo()->m_aWeaponString), "%s%s", AccountInfo()->m_aWeaponString[0]?AccountInfo()->m_aWeaponString:"", AccountInfo()->m_aWeaponString[0]?";":"");
-		str_format(AccountInfo()->m_aWeaponString, sizeof(AccountInfo()->m_aWeaponString), "%s%s", AccountInfo()->m_aWeaponString[0]?AccountInfo()->m_aWeaponString:"", aBuf);
+		str_fcat(AccountInfo()->m_aWeaponString, sizeof(AccountInfo()->m_aWeaponString), "%s", AccountInfo()->m_aWeaponString[0]?";":"");
+		str_fcat(AccountInfo()->m_aWeaponString, sizeof(AccountInfo()->m_aWeaponString), "%s", aBuf);
 	}
 
 	return true;

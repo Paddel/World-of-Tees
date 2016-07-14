@@ -356,6 +356,7 @@ public:
 		char m_Temperature;
 		unsigned char m_Moisture;
 		char m_Eruption;
+		char m_TicketLevel;
 
 		void Reset()
 		{
@@ -373,6 +374,7 @@ public:
 			m_Temperature = 0;
 			m_Moisture = 100;
 			m_Eruption = 8;
+			m_TicketLevel = 0;
 		}
 	};
 	CMapInfo m_MapInfo;

@@ -191,6 +191,7 @@ struct CMapItemInfoEx : CMapItemInfo
 	char m_Temperature;
 	unsigned char m_Moisture;
 	char m_Eruption;
+	char m_TicketLevel;
 };
 
 struct CMapItemImage

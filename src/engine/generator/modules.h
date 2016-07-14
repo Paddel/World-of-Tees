@@ -7,15 +7,15 @@
 
 struct CPrevMapInfo
 {
-	int m_TransitionID, m_Eruption, m_Temperature, m_Moisture;
+	int m_TransitionID, m_Eruption, m_Temperature, m_Moisture, m_TicketLevel;
 	char m_aName[256];
-	CPrevMapInfo(char *pName, int TransitionID, int Eruption, int Temperature, int Moisture)
-		: m_TransitionID(TransitionID), m_Eruption(Eruption), m_Temperature(Temperature), m_Moisture(Moisture)
+	CPrevMapInfo(char *pName, int TransitionID, int Eruption, int Temperature, int Moisture, int TicketLevel)
+		: m_TransitionID(TransitionID), m_Eruption(Eruption), m_Temperature(Temperature), m_Moisture(Moisture), m_TicketLevel(TicketLevel)
 	{
 		str_copy(m_aName, pName, sizeof(m_aName));
 	}
 
-	CPrevMapInfo() { CPrevMapInfo("", 0, 2, 0, 100); }
+	CPrevMapInfo() { CPrevMapInfo("", 0, 2, 0, 100, 0); }
 };
 
 class CGenImageInfo
@@ -225,6 +225,7 @@ struct CGeneratingMap
 	int m_Moisture;
 	int m_Eruption;
 	int m_MapBiome;
+	int m_TicketLevel;
 
 	int m_TransitionCount;
 	int m_GenMapCount;

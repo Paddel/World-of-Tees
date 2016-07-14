@@ -50,7 +50,7 @@ static char *s_aWeaponNames[NUM_WEAPS] = {
 
 enum
 {
-	WEAP_MAX_LEN=128,//changing this also requires a change
+	WEAP_MAX_LEN=128,//changing this also requires a change in database
 };
 
 static int GetWeaponType(const char *pName)

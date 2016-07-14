@@ -183,10 +183,11 @@ void CGuard::Snap(int SnappingClient)
 		return;
 
 	char aName[128];
+	mem_zero(&aName, sizeof(aName));
 	int LifeRate = (m_Health/(float)MaxHealth())*100.0f;
-	str_format(aName, sizeof(aName), "%s", NpcName());
+	str_fcat(aName, sizeof(aName), "%s", NpcName());
 	if(LifeRate < 100)
-		str_format(aName, sizeof(aName), "%s [%i%%]", aName, LifeRate);
+		str_fcat(aName, sizeof(aName), " [%i%%]", LifeRate);
 
 	StrToInts(&pClientInfo->m_Name0, 4, aName);
 	StrToInts(&pClientInfo->m_Clan0, 3, "Npc");

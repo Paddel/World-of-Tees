@@ -133,7 +133,7 @@ public:
 	void GenerateRiverFrozen(CGeneratingMap& GenMap);
 	void GenerateGameLayerStuff(CGeneratingMap& GenMap);
 	void GenerateLightSources(CGeneratingMap& GenMap);
-	void CGenerator::SetMainTransitions(CGeneratingMap& GenMap);
+	void SetMainTransitions(CGeneratingMap& GenMap);
 
 	void GenerateForestVegetation(CGeneratingMap& GenMap);
 

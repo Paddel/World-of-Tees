@@ -299,20 +299,20 @@ void CCharacter::ReplaceWeapon(int Index, CWeapon *pNew)
 	pOld = PlayerInfo()->m_pWeapon[Index];
 
 	str_copy(aBuf, "Replace Weapon:\n\n", sizeof(aBuf));
-	str_format(aBuf, sizeof(aBuf), "%sReplace\n", aBuf);
-	str_format(aBuf, sizeof(aBuf), "%sAbort\n\n", aBuf);
-	str_format(aBuf, sizeof(aBuf), "%sOld:\n    Name: %s\n    Damage: %i\n    Type: %s\n", aBuf, s_aWeaponNames[pOld->GetType()], pOld->Damage(), pOld->Ranged() ? "Ranged" : "Meele");
+	str_fcat(aBuf, sizeof(aBuf), "Replace\n");
+	str_fcat(aBuf, sizeof(aBuf), "Abort\n\n");
+	str_fcat(aBuf, sizeof(aBuf), "Old:\n    Name: %s\n    Damage: %i\n    Type: %s\n", s_aWeaponNames[pOld->GetType()], pOld->Damage(), pOld->Ranged() ? "Ranged" : "Meele");
 	if(pOld->MaxAmmo() > -1)
-		str_format(aBuf, sizeof(aBuf), "%s    Ammo: %i/%i\n", aBuf, pOld->Ammo(), pOld->MaxAmmo());
+		str_fcat(aBuf, sizeof(aBuf), "    Ammo: %i/%i\n", pOld->Ammo(), pOld->MaxAmmo());
 	if(pOld->ManaCosts() > 0)
-		str_format(aBuf, sizeof(aBuf), "%s    Maxacosts: %i\n", aBuf, pOld->ManaCosts());
-	str_format(aBuf, sizeof(aBuf), "%s\n", aBuf);
-	str_format(aBuf, sizeof(aBuf), "%sNew:\n    Name: %s\n    Damage: %i\n    Type: %s\n", aBuf, s_aWeaponNames[pNew->GetType()], pNew->Damage(), pNew->Ranged() ? "Ranged" : "Meele");
+		str_fcat(aBuf, sizeof(aBuf), "    Maxacosts: %i\n", pOld->ManaCosts());
+	str_fcat(aBuf, sizeof(aBuf), "\n");
+	str_fcat(aBuf, sizeof(aBuf), "New:\n    Name: %s\n    Damage: %i\n    Type: %s\n", s_aWeaponNames[pNew->GetType()], pNew->Damage(), pNew->Ranged() ? "Ranged" : "Meele");
 	if (pNew->MaxAmmo() > -1)
-		str_format(aBuf, sizeof(aBuf), "%s    Ammo: %i/%i\n", aBuf, pNew->Ammo(), pNew->MaxAmmo());
+		str_fcat(aBuf, sizeof(aBuf), "    Ammo: %i/%i\n", pNew->Ammo(), pNew->MaxAmmo());
 	if (pNew->ManaCosts() > 0)
-		str_format(aBuf, sizeof(aBuf), "%s    Maxacosts: %i\n", aBuf, pNew->ManaCosts());
-	str_format(aBuf, sizeof(aBuf), "%s\n", aBuf);
+		str_fcat(aBuf, sizeof(aBuf), "    Maxacosts: %i\n", pNew->ManaCosts());
+	str_fcat(aBuf, sizeof(aBuf), "\n");
 
 	CDecision aDecision[MAX_DECISIONS];
 	aDecision[0].m_Line = 2;

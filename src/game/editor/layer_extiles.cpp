@@ -183,7 +183,7 @@ void CLayerExTiles::BrushDraw(CLayer *pBrush, float wx, float wy)
 						}
 
 
-						str_format(NewExTile.m_ExArgs, sizeof(NewExTile.m_ExArgs), "%s%c%c%s%s", NewExTile.m_ExArgs[0]?NewExTile.m_ExArgs:"", Indicator, 0xff, aVal, i==Size-1?"":"\xff");
+						str_fcat(NewExTile.m_ExArgs, sizeof(NewExTile.m_ExArgs), "%c%c%s%s", Indicator, 0xff, aVal, i==Size-1?"":"\xff");
 					}
 				}
 

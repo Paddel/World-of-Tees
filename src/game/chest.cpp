@@ -3,7 +3,7 @@
 #include <base/system.h>
 #include <game/generated/protocol.h>
 
-#include "chest.h."
+#include "chest.h"
 
 CChest::CChest()
 {
@@ -85,7 +85,7 @@ void CChest::DropRand(ChestFunc BaseFunc, DropFunc Func, void *pInfo, int Client
 	{
 	case RANDCONTENT_SMALL:
 	{
-		int Money = m_RandNum % 50 + 170;
+		int Money = m_RandNum % 30 + 20;
 		int NumShuriken = m_RandNum % 20 + 20;
 		char aBuf[256];
 		str_format(aBuf, sizeof(aBuf), "dmg=14;ammo=%i", NumShuriken);
@@ -106,7 +106,7 @@ void CChest::DropRand(ChestFunc BaseFunc, DropFunc Func, void *pInfo, int Client
 	}break;
 	case RANDCONTENT_MEDIUM:
 	{
-		int Money = m_RandNum % 200 + 300;
+		int Money = m_RandNum % 70 + 60;
 		BaseFunc(pInfo, CHESTSIZE_SMALL, 1800);
 		Func(pInfo, "Money", Money, 0x0, ClientID);
 		if (m_RandNum % 2 == 0)

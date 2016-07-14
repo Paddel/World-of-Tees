@@ -92,6 +92,7 @@ void CMap::LoadMapType()
 		m_Moisture = pItem->m_Moisture;
 		m_MapBiome = CalculateBiome(pItem->m_Temperature, pItem->m_Moisture);
 		m_Eruption = pItem->m_Eruption;
+		m_TicketLevel = pItem->m_TicketLevel;
 	}
 }
 
@@ -266,7 +267,7 @@ CMap *CMapLoader::Generate(CMap *pPrevMap, char *pName, int TransitionID)
 {
 	dbg_assert(m_Inited, "MapLoader not inited.");
 
-	CPrevMapInfo MapInfo = CPrevMapInfo(pPrevMap->GetName(), TransitionID, pPrevMap->GetMapEruption(), pPrevMap->GetMapTemperature(), pPrevMap->GetMapMoisture());
+	CPrevMapInfo MapInfo = CPrevMapInfo(pPrevMap->GetName(), TransitionID, pPrevMap->GetMapEruption(), pPrevMap->GetMapTemperature(), pPrevMap->GetMapMoisture(), pPrevMap->GetMapTicketLevel());
 	if (m_Generator.Generate(pName, MapInfo) == false)
 		return NULL;
 
