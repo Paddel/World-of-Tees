@@ -1,0 +1,4 @@
+Bank
+Hospital
+Ammo
+Casino

@@ -7,6 +7,8 @@ class IServer;
 class CDatabase
 {
 private:
+	void *m_pConnection;
+	void *m_pResult;
 	bool m_Connected;
 	IServer *m_pServer;
 

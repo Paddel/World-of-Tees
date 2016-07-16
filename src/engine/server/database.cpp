@@ -12,12 +12,7 @@
 
 #include <mysql.h>
 
-
 #include "database.h"
-
-MYSQL_ROW field;
-MYSQL *conn;
-MYSQL_RES *result;
 
 CDatabase::CDatabase()
 {
@@ -31,18 +26,18 @@ void CDatabase::Init(IServer *pServer, char *pAddr, char *pUserName, char *pPass
 	dbg_msg("Database", "Creating connection.");
 	m_Connected = InitConnection(pAddr, pUserName, pPass, pSchema);
 	if(m_Connected == DB_CONNECTION_BAD)
-		dbg_msg("Database", "Connecting failed: '%s'", mysql_error(conn));
+		dbg_msg("Database", "Connecting failed: '%s'", mysql_error((MYSQL *)m_pConnection));
 }
 
 
 bool CDatabase::InitConnection(char *pAddr, char *pUserName, char *pPass, char *pSchema)
 {
-	conn = mysql_init(NULL);
+	m_pConnection = mysql_init(NULL);
  
-    if (conn == NULL)
+    if (m_pConnection == NULL)
 		return DB_CONNECTION_BAD;
 
-    if (mysql_real_connect(conn, pAddr, pUserName, pPass, pSchema, 0,NULL,0) == NULL)
+    if (mysql_real_connect((MYSQL *)m_pConnection, pAddr, pUserName, pPass, pSchema, 0,NULL,0) == NULL)
         return DB_CONNECTION_BAD;
 
 	//if(g_Config.m_Debug)
@@ -53,11 +48,12 @@ bool CDatabase::InitConnection(char *pAddr, char *pUserName, char *pPass, char *
 
 void CDatabase::CloseConnection()
 {
-	mysql_close(conn);
+	mysql_close((MYSQL *)m_pConnection);
 }
 
 int CDatabase::Query(char *command)
 {
+	MYSQL *pConnection = (MYSQL*)m_pConnection;
 	if(!m_Connected)
 	{
 		//if(g_Config.m_Debug)
@@ -65,24 +61,25 @@ int CDatabase::Query(char *command)
 		return 1;
 	}
 
-	mysql_query(conn, command);//Main-cmd
+	mysql_query(pConnection, command);//Main-cmd
 
 	{//error
-		int err = mysql_errno(conn);
+		int err = mysql_errno(pConnection);
 		if(err)
 		{
-			dbg_msg("Database", "Query failed: '%s", mysql_error(conn));
+			dbg_msg("Database", "Query failed: '%s", mysql_error(pConnection));
 			return err;
 		}
 	}
 
-	result = mysql_store_result(conn);
+	m_pResult = mysql_store_result(pConnection);
+	MYSQL_RES *pResult = (MYSQL_RES *)m_pResult;
 
-	if(!result)//no Results. DONE
+	if(!pResult)//no Results. DONE
 		return -1;
 
-	int affected = mysql_num_fields(result);
-	int cont = (int)result->row_count; // Bottleneck: Use SELECT *, COUNT(*)
+	int affected = mysql_num_fields((MYSQL_RES *)pResult);
+	int cont = (int)((MYSQL_RES *)pResult)->row_count; // Bottleneck: Use SELECT *, COUNT(*)
 	//cout << "number entries: " << cont << endl;
 	
 	if(cont == 0)
@@ -104,12 +101,13 @@ int CDatabase::Query(char *command)
 
 void CDatabase::GetResult(ResultFunction ResultCallback, void *pData)
 {
-	if(!result)
+	MYSQL_RES *pResult = (MYSQL_RES *)m_pResult;
+	if(!pResult)
 		return;
 
-	field = mysql_fetch_row(result);
-	int affected = mysql_num_fields(result);
-	int count = (int)result->row_count; // Bottleneck: Use SELECT *, COUNT(*)
+	MYSQL_ROW field = mysql_fetch_row(pResult);
+	int affected = mysql_num_fields(pResult);
+	int count = (int)pResult->row_count; // Bottleneck: Use SELECT *, COUNT(*)
 	
 	if(count == 0 || affected == 0)
 		return;
@@ -119,10 +117,10 @@ void CDatabase::GetResult(ResultFunction ResultCallback, void *pData)
 		for(int x = 0; x < affected; x++)
 			ResultCallback(x, GetDatabaseValue(field[x]), sizeof(field[x]), pData);
 
-		field = mysql_fetch_row(result);
-		affected = mysql_num_fields(result);
+		field = mysql_fetch_row(pResult);
+		affected = mysql_num_fields(pResult);
 	}
-	result = 0;
+	pResult = 0;
 }
 
 char *CDatabase::GetDatabaseValue(char *pStr)

@@ -1,61 +1,17 @@
-[5787c90f][client]: starting...
-[5787c90f][client/sound]: sound init successful
-[5787c90f][engine/mastersrv]: refreshing master server addresses
-[5787c90f][textrender]: loaded pFont from 'data/fonts/DejaVuSans.ttf'
-[5787c90f][textrender]: default pFont set 08F39054
-[5787c90f][]: pFont memory usage: 2097152
-[5787c911][gameclient]: initialisation finished after 1686.29ms
-[5787c911][client]: version 0.6 626fce9a778df4d4
-[5787c911][engine/mastersrv]: saving addresses
-[5787c911][]: pFont memory usage: 3145728
-[5787c911][]: pFont memory usage: 3407872
-[5787c915][editor]: invoked
-[5787c916][]: pFont memory usage: 3670016
-[5787c91e][editor]: loaded editor/jungle_main.rules
-[5787c91e][]: pFont memory usage: 3801088
-[5787c91e][]: pFont memory usage: 3932160
-[5787c91f][]: pFont memory usage: 4063232
-[5787c91f][]: pFont memory usage: 4194304
-[5787c927][editor]: grabbing 47.720387 13.918448 0.000000 0.000000
-[5787c929][editor]: invoked
-[5787c92a][]: pFont memory usage: 4718592
-[5787c92a][editor]: grabbing 3467.212158 1580.677002 0.000000 0.000000
-[5787c92d][editor]: invoked
-[5787c93b][editor]: invoked
-[5787c93c][editor]: grabbing 3472.480225 1683.637939 0.000000 0.000000
-[5787c93d][editor]: invoked
-[5787c93f][editor]: invoked
-[5787c945][editor]: grabbing 3479.182617 1654.147461 0.000000 0.000000
-[5787c94c][editor]: grabbing 3252.929443 1732.296753 59.249023 106.299683
-[5787c951][editor]: grabbing 3477.414307 1676.130859 79.758301 14.075073
-[5787c956][editor]: grabbing 3409.050293 1747.846313 229.221191 4.021484
-[5787c95a][editor]: grabbing 3492.968018 1661.952271 0.000000 0.000000
-[5787c95d][editor]: invoked
-[5787c95e][editor]: saving to 'maps/wot/wot_town_church.map'...
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving tiles layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving tiles layer
-[5787c95f][editor]: saving tiles layer
-[5787c95f][editor]: saving tiles layer
-[5787c95f][editor]: saving tiles layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving quads layer
-[5787c95f][editor]: saving done
-[5787c961][editor]: invoked
-[5787c96b][client]: disconnecting. reason='unknown'
+[5788b33f][client]: starting...
+[5788b33f][client/sound]: sound init successful
+[5788b33f][engine/mastersrv]: refreshing master server addresses
+[5788b340][textrender]: loaded pFont from 'data/fonts/DejaVuSans.ttf'
+[5788b340][textrender]: default pFont set 08FF4054
+[5788b340][]: pFont memory usage: 2097152
+[5788b341][gameclient]: initialisation finished after 1856.75ms
+[5788b341][client]: version 0.6 626fce9a778df4d4
+[5788b341][engine/mastersrv]: saving addresses
+[5788b341][]: pFont memory usage: 3145728
+[5788b342][]: pFont memory usage: 3407872
+[5788b354][editor]: invoked
+[5788b380][editor]: invoked
+[5788b38a][editor]: invoked
+[5788b390][editor]: invoked
+[5788b3a6][editor]: invoked
+[57891bb0][client]: disconnecting. reason='unknown'
