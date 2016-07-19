@@ -7,17 +7,17 @@
 
 #include "broadcast.h"
 
-static char ExpTopLeft[] = { -30, -107, -108};
-static char ExpTopMidFull[] = { -30, -107, -90};
-static char ExpTopMidEmpty[] = { -30, -107, -112};
-static char ExpTopRight[] = { -30, -107, -105};
+static char ExpTopLeft[] = { -30, -107, -108, 0};
+static char ExpTopMidFull[] = { -30, -107, -90, 0};
+static char ExpTopMidEmpty[] = { -30, -107, -112, 0};
+static char ExpTopRight[] = { -30, -107, -105, 0};
 
-static char ExpBotLeft[] = { -30, -107, -102};
-static char ExpBotMidFull[] = { -30, -107, -87};
-static char ExpBotMidEmpty[] = { -30, -107, -112};
-static char ExpBotRight[] = { -30, -107, -99};
+static char ExpBotLeft[] = { -30, -107, -102, 0};
+static char ExpBotMidFull[] = { -30, -107, -87, 0};
+static char ExpBotMidEmpty[] = { -30, -107, -112, 0};
+static char ExpBotRight[] = { -30, -107, -99, 0};
 
-static char MoneyChar[] = {-30, -120, -121 };
+static char MoneyChar[] = {-30, -120, -121, 0};
 
 CBroadcast::CBroadcast(CGameContext *pGameServer, int Owner)
 {
