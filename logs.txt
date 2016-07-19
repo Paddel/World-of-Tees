@@ -1,17 +1,37 @@
-[5788b33f][client]: starting...
-[5788b33f][client/sound]: sound init successful
-[5788b33f][engine/mastersrv]: refreshing master server addresses
-[5788b340][textrender]: loaded pFont from 'data/fonts/DejaVuSans.ttf'
-[5788b340][textrender]: default pFont set 08FF4054
-[5788b340][]: pFont memory usage: 2097152
-[5788b341][gameclient]: initialisation finished after 1856.75ms
-[5788b341][client]: version 0.6 626fce9a778df4d4
-[5788b341][engine/mastersrv]: saving addresses
-[5788b341][]: pFont memory usage: 3145728
-[5788b342][]: pFont memory usage: 3407872
-[5788b354][editor]: invoked
-[5788b380][editor]: invoked
-[5788b38a][editor]: invoked
-[5788b390][editor]: invoked
-[5788b3a6][editor]: invoked
-[57891bb0][client]: disconnecting. reason='unknown'
+[578e27bb][client]: starting...
+[578e27bc][client/sound]: sound init successful
+[578e27bc][engine/mastersrv]: refreshing master server addresses
+[578e27bc][textrender]: loaded pFont from 'data/fonts/DejaVuSans.ttf'
+[578e27bc][textrender]: default pFont set 075D0054
+[578e27bd][]: pFont memory usage: 2097152
+[578e27bd][gameclient]: initialisation finished after 1180.80ms
+[578e27bd][client]: version 0.6 626fce9a778df4d4
+[578e27bd][engine/mastersrv]: saving addresses
+[578e27be][]: pFont memory usage: 2621440
+[578e27be][]: pFont memory usage: 2883584
+[578e27be][]: pFont memory usage: 3014656
+[578e27be][]: pFont memory usage: 3276800
+[578e27be][]: pFont memory usage: 3407872
+[578e27c0][]: pFont memory usage: 3538944
+[578e27c0][client]: disconnecting. reason='unknown'
+[578e27c0][client]: connecting to '141.100.73.224:8303'
+[578e27c1][][578e27c1][server]: player is ready. ClientID=0 addr=141.100.73.224:64339
+[578e27c1][server]: ClientID=0 passed spoofprotection
+[578e27c2][server]: 'Paddel' -> 'Paddel'
+[578e27c2][server]: player has entered the game. ClientID=0 addr=141.100.73.224:643[578e27c2][chat]: *** 'Paddel' entered and joined the game
+[578e27c3][]: pFont memory usage: 4718592
+[578e27c7][chat[578e27ce][server]: player is ready. ClientID=0 addr=141.100.73.224:64339
+[578e27ee][register]: ERROR: the master server reports that clients can not connect to this server.
+[578e27ee][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[578e27f1][server]: client dropped. cid=0 addr=141.100.73.224:64339 reason='Timeout'
+[578e27f1][chat]: *** 'Paddel' has left the game (Timeout)
+[578e27f1][game]: leave player='0:Paddel'
+[578e27fd][register]: ERROR: the master server reports that clients can not connect to this server.
+[578e27fd][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[578e280c][register]: ERROR: the master server reports that clients can not connect to this server.
+[578e280c][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[578e281b][register]: ERROR: the master server reports that clients can not connect to this server.
+[578e281b][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[578e2857][register]: refreshing ip addresses
+[578e2858][register]: fetching server counts
+[578e285b][register]: chose 'master4.teeworlds.com' as master, sending heartbeats

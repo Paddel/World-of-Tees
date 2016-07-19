@@ -104,9 +104,28 @@ void CWorldSection::NewMapTransitionTo(vec2 Pos, char *pArgs)
 	m_pMapTransitions.add( new CMapTransition(ID, Pos) );
 }
 
+void CWorldSection::HandleTransitionFromExtra(char *pExtra, int& TicketLevel)
+{
+	char aBuf[MAX_EXTENTED_STR];
+	char *pBuf = aBuf;
+	str_copy(aBuf, pExtra, sizeof(aBuf));
+	char *pArg = GetSepStr(';', &pBuf);
+	if(str_comp(pArg, "-") == 0)
+		return;
+
+	while(pArg[0])
+	{
+		char *pName = GetSepStr('=', &pArg);
+		if(str_comp(pName, "ticket") == 0)
+			TicketLevel = atoi(pArg);
+
+		pArg = GetSepStr(';', &pBuf);
+	}
+}
+
 void CWorldSection::NewMapTransitionFrom(vec2 Pos, char *pArgs)
 {
-	char *pMapName = GameServer()->GetMapString(&pArgs, "MapTransition 'From'", Pos, Map());
+	char *pMapName = GameServer()->GetMapString(&pArgs, "MapTransition 'From' name", Pos, Map());
 	CMap *pMap = Server()->m_MapLoader.GetMap(pMapName);
 
 	if(!pMap)
@@ -119,13 +138,15 @@ void CWorldSection::NewMapTransitionFrom(vec2 Pos, char *pArgs)
 			dbg_msg("MapTransition", "Map %s not found.", pMapName);
 		}
 	}
-	int ID = GameServer()->GetMapInteger(&pArgs, "CMapTransition 'From'", Pos, Map());
+	int ID = GameServer()->GetMapInteger(&pArgs, "CMapTransition 'From' ID", Pos, Map());
 
 	bool HammerNeeded = false;
-	if(GameServer()->GetMapInteger(&pArgs, "CMapTransition 'From'", Pos, Map()) > 0)
+	if(GameServer()->GetMapInteger(&pArgs, "CMapTransition 'From' HammerNeeded", Pos, Map()) > 0)
 		HammerNeeded = true;
 
-	int TicketLevel = GameServer()->GetMapInteger(&pArgs, "CMapTransition 'From'", Pos, Map());
+	char *pExtra = GameServer()->GetMapString(&pArgs, "MapTransition 'From' Extra", Pos, Map());
+	int TicketLevel = 1;
+	HandleTransitionFromExtra(pExtra, TicketLevel);
 
 	m_pMapTransitions.add( new CMapTransitionFrom(ID, Pos, pMap, HammerNeeded, TicketLevel) );
 }

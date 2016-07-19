@@ -4370,7 +4370,7 @@ void CEditor::Init()
 void CEditor::RegisterExtendetTiles()
 {
 	//RegisterExtendInput(EXTILE_TEST, "Test", "i;Testint;5;s;TestStr;blub");
-	RegisterExtendInput(EXTILE_MAPTRANSITION_FROM, "Map-Transition from", "s;Mapname;wot_;i;ID;0;i;Hammer needed;0;i;Ticket lvl;1");
+	RegisterExtendInput(EXTILE_MAPTRANSITION_FROM, "Map-Transition from", "s;Mapname;wot_;i;ID;0;i;Hammer needed;0;s;Extra;-");
 	RegisterExtendInput(EXTILE_MAPTRANSITION_TO, "Map-Transition to", "i;ID;0");
 	RegisterExtendInput(EXTILE_NPC_HELPER, "Npc Helper", "i;ID;0");
 	RegisterExtendInput(EXTILE_HEAL_STONE, "Heal Stone", "i;Height;1");

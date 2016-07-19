@@ -2676,7 +2676,7 @@ void CGenerator::SetMainTransitions(CGeneratingMap& GenMap)
 
 			pExTileLayer->m_pTiles[Tile].m_Index = EXTILE_MAPTRANSITION_FROM;
 			str_format(pExTileLayer->m_pExTiles[Tile].m_ExArgs, MAX_EXTENTED_STR,
-				"s%c%s%ci%c%i%ci%c%i%ci%c0", 0xff, GenMap.m_PrevMapInfo.m_aName, 0xff, 0xff, GenMap.m_PrevMapInfo.m_TransitionID, 0xff, 0xff, ChosenTrans > 1 ? 1 : 0, 0xff, 0xff);
+				"s%c%s%ci%c%i%ci%c%i%cs%c-", 0xff, GenMap.m_PrevMapInfo.m_aName, 0xff, 0xff, GenMap.m_PrevMapInfo.m_TransitionID, 0xff, 0xff, ChosenTrans > 1 ? 1 : 0, 0xff, 0xff);
 
 			for (int nx = -2; nx <= 2; nx++)
 				if (pExTileLayer->m_pTiles[Tile + nx].m_Index == EXTILE_MAPTRANSITION_TO)

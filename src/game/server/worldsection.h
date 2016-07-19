@@ -55,6 +55,7 @@ private:
 	int64 m_LastActive;
 
 	void NewMapTransitionTo(vec2 Pos, char *pArgs);
+	void HandleTransitionFromExtra(char *pExtra, int& TicketLevel);
 	void NewMapTransitionFrom(vec2 Pos, char *pArgs);
 	void NewHelper(vec2 Pos, char *pArgs);
 	void NewHealingStone(vec2 Pos, char *pArgs);
