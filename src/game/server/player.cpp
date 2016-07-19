@@ -407,7 +407,7 @@ void CPlayer::LoadWeaponString()
 void CPlayer::SetBeginingValues()
 {
 	AccountInfo()->m_Level = 1;
-	AccountInfo()->m_TicketLevel = 0;
+	AccountInfo()->m_TicketLevel = 1;
 	AccountInfo()->m_Experience = 0;
 	AccountInfo()->m_Money = 0;
 	AccountInfo()->m_DeathNum = 0;

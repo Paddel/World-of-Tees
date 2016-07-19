@@ -521,6 +521,14 @@ bool CCharacter::OnWormhole()
 
 		if(m_ActiveWeapon != WEAP_HAMMER || (m_Input.m_Fire&1) == 0 || (m_PrevInput.m_Fire&1) == 1)
 			return true;
+
+		if(pMapTransitionFrom->m_TicketLevel > GetPlayer()->AccountInfo()->m_TicketLevel)
+		{
+			char aBuf[256];
+			str_format(aBuf, sizeof(aBuf), "You need Ticket #%i to enter this area. You have Ticket #%i", pMapTransitionFrom->m_TicketLevel, GetPlayer()->AccountInfo()->m_TicketLevel);
+			GameServer()->SendChatTarget(GetPlayer()->GetCID(), aBuf);
+			return true;
+		}
 	}
 
 	if(pMapTransitionFrom->Map() == NULL)

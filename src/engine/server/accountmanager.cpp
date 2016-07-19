@@ -38,7 +38,7 @@ void CAccountManager::Save(CAccountInfo *pAccInfo)
 
 void CAccountManager::FillPlayerInformation(char *pStr, CAccountInfo *pAccInfo)
 {
-	strcat(pStr, "player(name, password, money, level, experience, health, map, posx, posy, deathnum, skillpoints, weapons) VALUES (");
+	strcat(pStr, "player(name, password, money, level, experience, health, map, posx, posy, deathnum, skillpoints, weapons, ticketlevel) VALUES (");
 	AddQueryStr(pStr, pAccInfo->m_aLoginName);
 	strcat(pStr, ", ");
 	AddQueryStr(pStr, pAccInfo->m_aLoginPassword);
@@ -62,6 +62,8 @@ void CAccountManager::FillPlayerInformation(char *pStr, CAccountInfo *pAccInfo)
 	AddQueryInt(pStr, pAccInfo->m_SkillPoints);
 	strcat(pStr, ", ");
 	AddQueryStr(pStr, pAccInfo->m_aWeaponString);
+	strcat(pStr, ", ");
+	AddQueryInt(pStr, pAccInfo->m_TicketLevel);
 	strcat(pStr, ");");
 }
 
@@ -95,6 +97,7 @@ void CAccountManager::WriteAccountInfo(int index, char *pResult, int pResultSize
 		case 9: pAccInfo->m_DeathNum = atoi(pResult); break;
 		case 10: pAccInfo->m_SkillPoints = atoi(pResult); break;
 		case 11: str_copy(pAccInfo->m_aWeaponString, pResult, WEAP_MAX_LEN); break;
+		case 12: pAccInfo->m_TicketLevel = atoi(pResult); break;
 
 		//case 9999: pAccInfo->m_Money = atoi(pResult); break;
 	}

@@ -20,7 +20,8 @@ int Town_Ticket_Costs(int Ticket)
 {
 	switch(Ticket)
 	{
-	case 1:	return 350;
+	case 1: return 0;
+	case 2:	return 350;
 	}
 	return 0;
 }
@@ -29,7 +30,8 @@ int Town_Ticket_Level(int Ticket)
 {
 	switch(Ticket)
 	{
-	case 1:	return 2;
+	case 1: return 1;
+	case 2:	return 2;
 	}
 	return 0;
 }
