@@ -708,6 +708,11 @@ void CCharacter::ExTileCheck()
 		int ID = GameServer()->GetMapInteger(&pArgs, "Door-Trigger", m_Pos, Map());
 		Map()->WorldSection()->OnRemote(CRemote::REMOTETYPE_BOLDER, ID);
 	}
+
+	if(Tile == EXTILE_HEAL)
+		m_OnHealTile = true;
+	else
+		m_OnHealTile = false;
 	
 	m_LastExTile = Tile;
 }
@@ -1173,11 +1178,13 @@ void CCharacter::Snap(int SnappingClient)
 
 	if (m_BackportTime != 0)
 	{
+		float RestTime = m_BackportTime - Server()->Tick();
+		float DistFac = RestTime / (Server()->TickSpeed() * BACKPORT_TIME);
+		float Dist = 40.0f * DistFac + 23.0f;
+		float t = Server()->Tick() / 20.0f;
+
 		for (int i = 0; i < 3; i++)
 		{
-			float DistFac = m_BackportTime / (float)(Server()->Tick() + Server()->TickSpeed() * BACKPORT_TIME) * 1.5f;
-			float Dist = 48.0f * DistFac;
-			float t = Server()->Tick() / 20.0f;
 			float PosFac = i / 3.0f;
 			vec2 Pos = m_Pos + vec2(cosf(2 * pi * PosFac + t), sinf(2 * pi * PosFac + t)) * Dist;
 			RenderProjectile(m_aSnapIDs[i], Server()->Tick() - 10, Pos, vec2(0, 0), WEAP_HAMMER);
@@ -1244,8 +1251,14 @@ void CCharacter::DoRegeneration()
 {
 	if(HasHealth() && m_RegenHealthTime < Server()->Tick())
 	{
-		if(*m_pHealth < Character_MaxHealth(GetPlayer()->AccountInfo()->m_Level))
-			IncreaseHealth(1);
+		int MaxHealth = Character_MaxHealth(GetPlayer()->AccountInfo()->m_Level);
+		if(*m_pHealth < MaxHealth)
+		{
+			if(m_OnHealTile)
+				IncreaseHealth(MaxHealth / 15);
+			else
+				IncreaseHealth(1);
+		}
 
 		m_RegenHealthTime = Server()->Tick()+Server()->TickSpeed()*2.75f;
 	}
@@ -1291,4 +1304,9 @@ CWeapon *CCharacter::HasWeapon(int Type)
 			return PlayerInfo()->m_pWeapon[i];
 	}
 	return NULL;
+}
+
+CWeapon *CCharacter::CurrentWeapon()
+{
+	return PlayerInfo()->m_pWeapon[m_ActiveWeapon];
 }

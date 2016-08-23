@@ -1,4 +1,7 @@
 Bank
 Hospital
 Ammo
+
 Casino
+Hotel
+MyHouse

@@ -4373,9 +4373,7 @@ void CEditor::RegisterExtendetTiles()
 	RegisterExtendInput(EXTILE_MAPTRANSITION_FROM, "Map-Transition from", "s;Mapname;wot_;i;ID;0;i;Hammer needed;0;s;Extra;-");
 	RegisterExtendInput(EXTILE_MAPTRANSITION_TO, "Map-Transition to", "i;ID;0");
 	RegisterExtendInput(EXTILE_NPC_HELPER, "Npc Helper", "i;ID;0");
-	RegisterExtendInput(EXTILE_HEAL_STONE, "Heal Stone", "i;Height;1");
 	RegisterExtendInput(EXTILE_NPC_SPAWNER, "Npc Spawner", "s;Type;Bandit;i;Max Num;5;i;Respawn time;30");
-	RegisterExtendInput(EXTILE_HEAL_STONE, "Heal Stone", "i;Height;1");
 	RegisterExtendInput(EXTILE_CHEST, "Chest", "i;Chest-ID;0");
 	RegisterExtendInput(EXTILE_CHEST_DISPLAY, "Chest Display", "i;Chest-ID;0");
 	RegisterExtendInput(EXTILE_DOOR, "Door", "i;Door-ID;0;i;Type;0;i;Time;15");

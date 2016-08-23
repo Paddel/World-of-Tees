@@ -10,7 +10,7 @@
 
 #define NPC_MOVE_FARWORD_PREDICT 5
 
-static char MoneyChar[] = {-30, -120, -121 };
+static char MoneyChar[] = {-30, -120, -121, 0};
 
 CTicketSeller::CTicketSeller(CGameContext *pGameServer, CMap *pMap, CNpcHolder *pNpcHolder, vec2 Pos, int Ticket)
 	: CNpc(pGameServer, pMap, pNpcHolder, Pos, INTERFLAG_COL, NPC_HELPER), CTargetAble(&pGameServer->m_World, CTargetAble::TYPE_NPC_VILLIGER, pMap)
@@ -175,7 +175,7 @@ void CTicketSeller::Tick()
 			continue;
 
 		CCharacter *pChr = GameServer()->GetPlayerChar(i);
-		if(!pChr)
+		if(!pChr || pChr->Map() != Map())
 			continue;
 
 		float dist = distance(GetPos(), pChr->m_Pos);

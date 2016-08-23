@@ -1,15 +1,207 @@
-[578e3a4c][client]: starting...
-[578e3a4d][client/sound]: sound init successful
-[578e3a4d][engine/mastersrv]: refreshing master server addresses
-[578e3a4d][textrender]: loaded pFont from 'data/fonts/DejaVuSans.ttf'
-[578e3a4d][textrender]: default pFont set 08BD0054
-[578e3a4e][]: pFont memory usage: 2097152
-[578e3a4e][gameclient]: initialisation finished after 1169.97ms
-[578e3a4e][client]: version 0.6 626fce9a778df4d4
-[578e3a4e][engine/mastersrv]: saving addresses
-[578e3a4f][]: pFont memory usage: 2621440
-[578e3a4f][]: pFont memory usage: 2883584
-[578e3a4f][]: pFont memory usage: 3014656
-[578e3a4f][]: pFont memory usage: 3276800
-[578e3a4f][]: pFont memory usage: 3407872
-[578e3a53][client]: disconnecting. reason='unknown'
+[57b9af64][server]: starting...
+[57b9af64][Database]: Creating connection.
+[57b9af64][Database]: Connected
+[57b9af64][server]: server name is 'World of Tees - Srv #1'
+[57b9af64][server]: version 0.6 626fce9a778df4d4
+[57b9af64][Maploader]: Map 'wot_town_church' added as default map.
+[57b9af64][Maploader]: Map 'wot_town_street_main' added.
+[57b9af64][Maploader]: Map 'wot_town_out_main_west' added.
+[57b9af64][Maploader]: Map 'wot_town_street_one' added.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][Maploader]: Map 'wot_town_hospital' added.
+[57b9af65][Maploader]: Map 'wot_town_shop' added.
+[57b9af65][Maploader]: Map 'wot_town_out_one' added.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][MapTransition]: Map wot_town_bank not found.
+[57b9af65][Maploader]: Map 'wot_town_out_main_east' added.
+[57b9af65][server]: Finished loading map!
+[57b9af65][engine/mastersrv]: refreshing master server addresses
+[57b9af65][register]: refreshing ip addresses
+[57b9af65][engine/mastersrv]: saving addresses
+[57b9af65][register]: fetching server counts
+[57b9af67][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9af67][server]: ClientID=0 passed spoofprotection
+[57b9af68][register]: chose 'master3.teeworlds.com' as master, sending heartbeats
+[57b9af68][server]: 'SAI [PiT]za' -> 'SAI [PiT]za'
+[57b9af68][server]: player has entered the game. ClientID=0 addr=192.168.0.100:52479
+[57b9af68][chat]: *** 'SAI [PiT]za' entered and joined the game
+[57b9af68][game]: team_join player='0:SAI [PiT]za' team=0
+[57b9af6d][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9af6d][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9af6f][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9af7c][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9af7c][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9af85][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9af8b][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9af8b][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9af90][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9af98][Automap]: loaded editor/grass_main.rules
+[57b9af99][generator]: saving to 'maps/generated/gen_2577.map'...
+[57b9af9a][generator]: saving done
+[57b9af9a][Maploader]: Map 'gen_2577' added.
+[57b9af9b][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9af9b][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9af9b][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9afc4][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9afc9][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9afd4][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9afd7][register]: refreshing ip addresses
+[57b9afd7][register]: fetching server counts
+[57b9afda][register]: chose 'master3.teeworlds.com' as master, sending heartbeats
+[57b9afdb][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9aff4][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b002][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b003][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b006][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b00d][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b00d][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b00e][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b01c][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b01c][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b02b][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b02b][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b03a][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b03a][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b074][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b076][register]: refreshing ip addresses
+[57b9b076][register]: fetching server counts
+[57b9b079][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b079][register]: chose 'master3.teeworlds.com' as master, sending heartbeats
+[57b9b086][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b08c][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b0ab][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b0ad][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b0ad][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b0bc][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b0bc][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b0cb][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b0cb][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b0cb][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b0d8][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b0da][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b0da][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b0e9][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b0f0][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b116][register]: refreshing ip addresses
+[57b9b116][register]: fetching server counts
+[57b9b11a][Automap]: loaded editor/grass_main.rules
+[57b9b11a][generator]: saving to 'maps/generated/gen_21834.map'...
+[57b9b11c][generator]: saving done
+[57b9b11c][Maploader]: Map 'gen_21834' added.
+[57b9b11d][register]: chose 'master3.teeworlds.com' as master, sending heartbeats
+[57b9b11d][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b152][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b152][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b161][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b161][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b170][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b170][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b17f][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b17f][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b183][Automap]: loaded editor/grass_main.rules
+[57b9b183][generator]: saving to 'maps/generated/gen_27105.map'...
+[57b9b185][generator]: saving done
+[57b9b185][Maploader]: Map 'gen_27105' added.
+[57b9b186][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b1ba][Automap]: loaded editor/grass_main.rules
+[57b9b1bb][generator]: saving to 'maps/generated/gen_29881.map'...
+[57b9b1bc][generator]: saving done
+[57b9b1bc][Maploader]: Map 'gen_29881' added.
+[57b9b1bd][register]: refreshing ip addresses
+[57b9b1bd][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b1bd][register]: fetching server counts
+[57b9b1c0][register]: chose 'master3.teeworlds.com' as master, sending heartbeats
+[57b9b1f2][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b1f2][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b201][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b201][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b210][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b210][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b21f][Automap]: loaded editor/grass_main.rules
+[57b9b21f][generator]: saving to 'maps/generated/gen_34887.map'...
+[57b9b221][generator]: saving done
+[57b9b221][Maploader]: Map 'gen_34887' added.
+[57b9b221][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b221][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b221][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b25d][register]: refreshing ip addresses
+[57b9b25d][register]: fetching server counts
+[57b9b260][register]: chose 'master3.teeworlds.com' as master, sending heartbeats
+[57b9b286][Automap]: loaded editor/grass_main.rules
+[57b9b286][generator]: saving to 'maps/generated/gen_40062.map'...
+[57b9b288][generator]: saving done
+[57b9b288][Maploader]: Map 'gen_40062' added.
+[57b9b289][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b292][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b292][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b2a1][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b2a1][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b2b0][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b2b0][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b2bf][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b2bf][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b2fb][register]: refreshing ip addresses
+[57b9b2fb][register]: fetching server counts
+[57b9b2fe][register]: chose 'master3.teeworlds.com' as master, sending heartbeats
+[57b9b301][Automap]: loaded editor/grass_main.rules
+[57b9b301][generator]: saving to 'maps/generated/gen_46188.map'...
+[57b9b303][generator]: saving done
+[57b9b303][Maploader]: Map 'gen_46188' added.
+[57b9b303][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b333][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b333][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b342][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b342][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b351][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b351][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b360][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b360][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b360][Automap]: loaded editor/grass_main.rules
+[57b9b360][generator]: saving to 'maps/generated/gen_50951.map'...
+[57b9b362][generator]: saving done
+[57b9b362][Maploader]: Map 'gen_50951' added.
+[57b9b362][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b39c][register]: refreshing ip addresses
+[57b9b39c][register]: fetching server counts
+[57b9b39f][register]: chose 'master3.teeworlds.com' as master, sending heartbeats
+[57b9b3b9][Automap]: loaded editor/grass_main.rules
+[57b9b3ba][generator]: saving to 'maps/generated/gen_55435.map'...
+[57b9b3bc][generator]: saving done
+[57b9b3bc][Maploader]: Map 'gen_55435' added.
+[57b9b3bc][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b3d3][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b3d3][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b3e2][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b3e2][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b3f1][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b3f1][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b400][register]: ERROR: the master server reports that clients can not connect to this server.
+[57b9b400][register]: ERROR: configure your firewall/nat to let through udp on port 8303.
+[57b9b43c][register]: refreshing ip addresses
+[57b9b43c][register]: fetching server counts
+[57b9b43f][register]: chose 'master3.teeworlds.com' as master, sending heartbeats
+[57b9b44a][server]: player is ready. ClientID=0 addr=192.168.0.100:52479
+[57b9b44d][server]: client dropped. cid=0 addr=192.168.0.100:52479 reason=''
+[57b9b44d][chat]: *** 'SAI [PiT]za' has left the game
+[57b9b44d][game]: leave player='0:SAI [PiT]za'

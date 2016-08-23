@@ -16,12 +16,12 @@ public:
 
 	virtual CWeapon *CreateWeapon() { return new CHammer(GameServer(), this, BaseDamage()); }
 	virtual char *NpcName() { return "Wild Tee"; }
-	virtual int MaxHealth() { return 70; }
-	virtual int MoneyAmount() { return 3; }
-	virtual int MoneyAddAmount() { return 5; }
-	virtual int BaseDamage() { return 5; }
-	virtual int Experience() { return 35; }
-	virtual int AttackSpeed() { return 900; }
+	virtual int MaxHealth() { return 150; }
+	virtual int MoneyAmount() { return 5; }
+	virtual int MoneyAddAmount() { return 3; }
+	virtual int BaseDamage() { return 9; }
+	virtual int Experience() { return 42; }
+	virtual int AttackSpeed() { return 800; }
 	virtual float WeaponDropChance() { return 0.0f; }
 	
 	//skin

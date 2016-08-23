@@ -15,6 +15,7 @@ public:
 	
 	virtual int SnapWeapon() { return WEAPON_HAMMER; }
 	virtual int ManaCosts() { return false; }
+	virtual int AmmoCosts() { return 0; }
 	virtual bool FullAuto() { return false;} 
 	virtual bool Ranged() { return false; }
 	virtual bool ShootAnim() { return true; }

@@ -17,12 +17,12 @@ public:
 
 	virtual CWeapon *CreateWeapon() { return new CGun(GameServer(), this, BaseDamage()); }
 	virtual char *NpcName() { return "Skeleton"; }
-	virtual int MaxHealth() { return 50; }
-	virtual int MoneyAmount() { return 7; }
+	virtual int MaxHealth() { return 150; }
+	virtual int MoneyAmount() { return 6; }
 	virtual int MoneyAddAmount() { return 5; }
-	virtual int BaseDamage() { return 6; }
-	virtual int Experience() { return 48; }
-	virtual int AttackSpeed() { return 700; }
+	virtual int BaseDamage() { return 9; }
+	virtual int Experience() { return 69; }
+	virtual int AttackSpeed() { return 350; }
 	virtual float WeaponDropChance() { return 0.15f; }
 	
 	//skin

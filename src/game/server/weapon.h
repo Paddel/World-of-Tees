@@ -96,6 +96,7 @@ public:
 	
 	virtual int SnapWeapon() = 0;
 	virtual int ManaCosts() = 0;
+	virtual int AmmoCosts() = 0;
 	virtual bool FullAuto() = 0;
 	virtual bool Ranged() = 0;
 	virtual bool ShootAnim() = 0;

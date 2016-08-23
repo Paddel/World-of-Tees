@@ -47,7 +47,7 @@ public:
 
 	void LoadWeaponString();
 	void SetBeginingValues();
-	bool FillSavingInfos();
+	bool FillSavingInfos(bool IllegalLogout);
 	bool Register(char *pFailMsg, int Size, char *pName, char *pPassword);
 	bool Login(char *pFailMsg, int Size, char *pName, char *pPassword);
 	bool Save();
@@ -59,6 +59,8 @@ public:
 	void Heal(float percent);
 
 	void Spectate(int SpectatingID);
+
+	CMap *GetHomeMap();
 
 	CMap *m_pWantedMap;
 

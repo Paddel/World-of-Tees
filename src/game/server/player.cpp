@@ -221,6 +221,16 @@ void CPlayer::Snap(int SnappingClient)
 
 void CPlayer::OnDisconnect(const char *pReason)
 {
+	bool ChangingMap = Server()->GetClientChangingMap(m_ClientID);
+	if(PlayerInfo()->m_LoggedIn && GetMap()->GetMapType() != MAPTYPE_TOWN && !ChangingMap)
+	{
+		OnCharacterDead();
+
+		if(FillSavingInfos(true))
+			Server()->m_AccountManager.Save(AccountInfo());
+
+	}
+
 	KillCharacter();
 
 	if(Server()->ClientIngame(m_ClientID))
@@ -302,7 +312,7 @@ void CPlayer::OnCharacterDead()
 
 	AccountInfo()->m_Health = Character_MaxHealth(AccountInfo()->m_Level)*0.5f;
 	AccountInfo()->m_Money *= 0.5f;
-	AccountInfo()->m_Experience *= 0.6f;
+	AccountInfo()->m_Experience *= 0.85f;
 
 	WantTeleportHome();
 }
@@ -373,7 +383,7 @@ void CPlayer::WantTeleportHome()
 
 void CPlayer::TeleportHome()
 {
-	CMap *pMap = Server()->m_MapLoader.GetDefaultMap();
+	CMap *pMap = GetHomeMap();
 
 	if(pMap == GetMap())
 		KillCharacter();
@@ -416,13 +426,20 @@ void CPlayer::SetBeginingValues()
 	AccountInfo()->m_Health = Character_MaxHealth(AccountInfo()->m_Level);
 }
 
-bool CPlayer::FillSavingInfos()
+bool CPlayer::FillSavingInfos(bool IllegalLogout)
 {
 	//if(GetCharacter() == NULL)
 		//return false;//should not happen!
 
-	AccountInfo()->m_CurrentPos = GetCore()->m_Pos;
-	str_copy(AccountInfo()->m_aCurrentMap, GetMap()->GetName(), sizeof(AccountInfo()->m_aCurrentMap));
+	if(IllegalLogout)
+		AccountInfo()->m_CurrentPos = vec2(0, 0);
+	else
+		AccountInfo()->m_CurrentPos = GetCore()->m_Pos;
+
+	if(IllegalLogout)
+		str_copy(AccountInfo()->m_aCurrentMap, GetHomeMap()->GetName(), sizeof(AccountInfo()->m_aCurrentMap));
+	else
+		str_copy(AccountInfo()->m_aCurrentMap, GetMap()->GetName(), sizeof(AccountInfo()->m_aCurrentMap));
 
 	mem_zero(AccountInfo()->m_aWeaponString, sizeof(AccountInfo()->m_aWeaponString));
 	for(int i = 0; i < MAX_WEAPONS; i++)
@@ -445,7 +462,7 @@ bool CPlayer::Register(char *pFailMsg, int Size, char *pName, char *pPassword)
 	if(PlayerInfo()->m_LoggedIn)
 		return false;
 
-	if(FillSavingInfos() == false)
+	if(FillSavingInfos(false) == false)
 		return false;
 
 	if(Server()->m_AccountManager.Register(pFailMsg, Size, pName, pPassword, AccountInfo()) == false)
@@ -472,7 +489,12 @@ bool CPlayer::Login(char *pFailMsg, int Size, char *pName, char *pPassword)
 	LoadWeaponString();
 
 	if(pMap == GetMap())
+	{
 		GetCharacter()->Core()->m_Pos = AccountInfo()->m_CurrentPos;
+
+		if(AccountInfo()->m_CurrentPos == vec2(0, 0))
+			GameServer()->m_pController->CanSpawn(m_Team, &GetCharacter()->Core()->m_Pos, m_pMap);
+	}
 	else
 	{
 		PlayerInfo()->m_TempSpawnPos = AccountInfo()->m_CurrentPos;
@@ -486,13 +508,13 @@ bool CPlayer::Save()
 	if(!PlayerInfo()->m_LoggedIn || GetMap()->GetMapType() != MAPTYPE_TOWN)
 		return false;
 
-	if(Server()->GetClientChangingMap(m_ClientID))
-	{
-		dbg_msg("Saving", "tried to save while changing map");
-		return false;
-	}
+	//if(Server()->GetClientChangingMap(m_ClientID))
+	//{
+		//dbg_msg("Saving", "tried to save while changing map");
+		//return false;
+	//}
 
-	if(FillSavingInfos() == false)
+	if(FillSavingInfos(false) == false)
 		return false;
 
 	Server()->m_AccountManager.Save(AccountInfo());
@@ -566,4 +588,9 @@ void CPlayer::Spectate(int SpectatingID)
 	}
 
 	PlayerInfo()->m_SpectatorID = SpectatingID;
+}
+
+CMap *CPlayer::GetHomeMap()
+{
+	return Server()->m_MapLoader.GetDefaultMap();
 }

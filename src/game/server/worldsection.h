@@ -58,7 +58,6 @@ private:
 	void HandleTransitionFromExtra(char *pExtra, int& TicketLevel);
 	void NewMapTransitionFrom(vec2 Pos, char *pArgs);
 	void NewHelper(vec2 Pos, char *pArgs);
-	void NewHealingStone(vec2 Pos, char *pArgs);
 	void NewNpcSpawner(vec2 Pos, char *pArgs);
 	void NewPuzzle(vec2 Pos, char *pArgs);
 	void NewNpcTicketSeller(vec2 Pos, char *pArgs);
@@ -71,7 +70,7 @@ private:
 
 	bool GetRandomSpawnPosition(vec2 Near, vec2 *pOut);
 	void DoRandomMobSpawn();
-	CEnemyNpc *DoSpawn(int MapType, int MapBiome, bool DayTime, vec2 SpawnPos);
+	CEnemyNpc *DoSpawn(int MapType, int MapBiome, int TicketLevel, bool DayTime, vec2 SpawnPos);
 	int SpawnRandomMob(vec2 Pos,int ClientID);
 	int GetTempMobNum();
 	int GetPlayerSpawnNum(int ClientID);

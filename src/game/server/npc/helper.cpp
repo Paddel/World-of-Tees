@@ -126,7 +126,7 @@ void CHelper::Tick()
 				continue;
 
 			CCharacter *pChr = GameServer()->GetPlayerChar(i);
-			if(!pChr)
+			if(!pChr || pChr->Map() != Map())
 				continue;
 
 			float dist = distance(GetPos(), pChr->m_Pos);

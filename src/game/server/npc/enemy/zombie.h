@@ -17,12 +17,12 @@ public:
 
 	virtual CWeapon *CreateWeapon() { return new CHammer(GameServer(), this, BaseDamage()); }
 	virtual char *NpcName() { return "Zombie"; }
-	virtual int MaxHealth() { return 130; }
-	virtual int MoneyAmount() { return 6; }
-	virtual int MoneyAddAmount() { return 6; }
-	virtual int BaseDamage() { return 8; }
-	virtual int Experience() { return 53; }
-	virtual int AttackSpeed() { return 850; }
+	virtual int MaxHealth() { return 370; }
+	virtual int MoneyAmount() { return 7; }
+	virtual int MoneyAddAmount() { return 5; }
+	virtual int BaseDamage() { return 14; }
+	virtual int Experience() { return 73; }
+	virtual int AttackSpeed() { return 700; }
 	virtual float WeaponDropChance() { return 0.0f; }
 	
 	//skin
@@ -31,5 +31,5 @@ public:
 	virtual int SkinColorBody() { return 0; }
 	virtual int SkinColorFeet() { return 0; }
 
-	virtual bool UseHook() { return false; }
+	virtual bool UseHook() { return true; }
 };

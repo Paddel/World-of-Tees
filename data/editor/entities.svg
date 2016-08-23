@@ -12,11 +12,11 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.48.4 r9939"
    width="1024"
    height="1024"
    sodipodi:docname="entities.svg"
-   inkscape:export-filename="C:\Users\Patrick\Desktop\#Mod-Base(RPG)\data\editor\entities.png"
+   inkscape:export-filename="C:\Users\Paddel\Desktop\Sourcen\World-of-Tees\data\editor\entities.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <metadata
@@ -27,7 +27,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -85,19 +85,19 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1536"
-     inkscape:window-height="801"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
      id="namedview4"
      showgrid="true"
      inkscape:snap-bbox="true"
      inkscape:zoom="1.3037281"
-     inkscape:cx="30.958474"
-     inkscape:cy="941.84492"
+     inkscape:cx="361.80375"
+     inkscape:cy="1064.5678"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
-     inkscape:snap-global="true"
+     inkscape:snap-global="false"
      inkscape:bbox-paths="true"
      inkscape:bbox-nodes="true">
     <inkscape:grid
@@ -422,4 +422,41 @@
      style="opacity:0.73063977;fill:#000000;fill-opacity:1;stroke:none"
      d="M 159.71875 69.1875 L 130.90625 97.84375 L 137.4375 97.84375 L 137.4375 128 L 145.75 128 L 145.75 114.84375 L 153.5 114.84375 L 153.5 128 L 182.71875 128 L 182.71875 97.84375 L 188.5625 97.84375 L 175.0625 84.4375 L 175.0625 73.625 L 170.71875 73.625 L 170.71875 80.125 L 159.71875 69.1875 z M 168.125 105.09375 L 175.0625 105.09375 L 175.0625 112 L 168.125 112 L 168.125 105.09375 z "
      id="rect3048" />
+  <rect
+     ry="5.0975183e-007"
+     y="64"
+     x="192"
+     height="64"
+     width="64"
+     id="rect3044"
+     style="fill:#8bee5f;fill-opacity:0.48235294;stroke:none" />
+  <text
+     xml:space="preserve"
+     style="font-size:24.45254707px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="195.10887"
+     y="81.421913"
+     id="text3046"
+     sodipodi:linespacing="125%"><tspan
+       style="font-size:20.37712288px"
+       sodipodi:role="line"
+       x="195.10887"
+       y="81.421913"
+       id="tspan3057">Ammo</tspan><tspan
+       style="font-size:20.37712288px"
+       sodipodi:role="line"
+       x="195.10887"
+       y="106.89332"
+       id="tspan3061">Shop</tspan></text>
+  <text
+     sodipodi:linespacing="125%"
+     id="text3050"
+     y="122.10902"
+     x="202.62567"
+     style="font-size:29.08519554px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"><tspan
+       id="tspan3053"
+       y="122.10902"
+       x="202.62567"
+       sodipodi:role="line"
+       style="font-size:13.33071423px">spawn</tspan></text>
 </svg>

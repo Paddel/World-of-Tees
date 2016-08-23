@@ -3,7 +3,6 @@
 #include <engine/server/maploader.h>
 #include <game/server/gamecontext.h>
 #include <game/server/npc/_include.h>
-#include <game/server/healingstone.h>
 
 #include "worldsection.h"
 
@@ -80,6 +79,11 @@ void CWorldSection::InitTile(int Index, vec2 Pos)
 		CNpc *pNpc = new CBeggar(GameServer(), Map(), this, Pos);
 		pNpc->Spawn();
 	}
+	else if(Index == TILE_NPC_SPAWN_SHOP)
+	{
+		CNpc *pNpc = new CAmmoShop(GameServer(), Map(), this, Pos);
+		pNpc->Spawn();
+	}
 }
 
 void CWorldSection::InitExTile(int Index, vec2 Pos, char *pArgs)
@@ -89,7 +93,6 @@ void CWorldSection::InitExTile(int Index, vec2 Pos, char *pArgs)
 	case EXTILE_MAPTRANSITION_FROM: NewMapTransitionFrom(Pos, pArgs); break;
 	case EXTILE_MAPTRANSITION_TO:	NewMapTransitionTo(Pos, pArgs); break;
 	case EXTILE_NPC_HELPER:			NewHelper(Pos, pArgs); break;
-	case EXTILE_HEAL_STONE:			NewHealingStone(Pos, pArgs); break;
 	case EXTILE_NPC_SPAWNER:		NewNpcSpawner(Pos, pArgs); break;
 	case EXTILE_PUZZLE:				NewPuzzle(Pos, pArgs); break;
 	case EXTILE_NPC_TICKETSELLER:	NewNpcTicketSeller(Pos, pArgs); break;
@@ -156,12 +159,6 @@ void CWorldSection::NewHelper(vec2 Pos, char *pArgs)
 	int ID = GameServer()->GetMapInteger(&pArgs, "Helper", Pos, Map());
 	CNpc *pNpc = new CHelper(GameServer(), Map(), this, Pos, ID);
 	pNpc->Spawn();
-}
-
-void CWorldSection::NewHealingStone(vec2 Pos, char *pArgs)
-{
-	int Height = GameServer()->GetMapInteger(&pArgs, "HealingStone", Pos, Map());
-	new CHealingStone(GameServer(), Map(), Pos, Height);
 }
 
 void CWorldSection::NewNpcSpawner(vec2 Pos, char *pArgs)
@@ -367,56 +364,73 @@ void CWorldSection::DoRandomMobSpawn()
 	}
 }
 
-CEnemyNpc *CWorldSection::DoSpawn(int MapType, int MapBiome, bool DayTime, vec2 SpawnPos)
+CEnemyNpc *CWorldSection::DoSpawn(int MapType, int MapBiome, int TicketLevel, bool DayTime, vec2 SpawnPos)
 {
 	if(MapType == MAPTYPE_WILDNESS)
 	{
-		if(MapBiome == MAPBIOME_PLAIRIE)
+		if(TicketLevel == 0)
 		{
 			if(DayTime == false)
 			{
 				if(rand()%4 == 0)
-					return new CSkeleton(GameServer(), Map(), this, SpawnPos);
+					return new CSkeletonSmall(GameServer(), Map(), this, SpawnPos);
 				else
-					return new CZombie(GameServer(), Map(), this, SpawnPos);
+					return new CZombieSmall(GameServer(), Map(), this, SpawnPos);
 			}
 			else
 			{
-				return new CWildtee(GameServer(), Map(), this, SpawnPos);
-			}
-		}
-		else if(MapBiome == MAPBIOME_DESERT)
-		{
-			//return new CShadow(GameServer(), Map(), this, SpawnPos);
-			if(DayTime == false)
-			{
-				if(rand()%3 == 0)
-				{
-					if(rand()%3 == 0)
-						return new CShadow(GameServer(), Map(), this, SpawnPos);
-					else
-						return new CSkeleton(GameServer(), Map(), this, SpawnPos);
-				}
-				else
-					return new CZombie(GameServer(), Map(), this, SpawnPos);
-			}
-			else
-			{
-				return new CNomad(GameServer(), Map(), this, SpawnPos);
+				return new CWildteeSmall(GameServer(), Map(), this, SpawnPos);
 			}
 		}
 		else
 		{
-			if (DayTime == false)
+			if(MapBiome == MAPBIOME_PLAIRIE)
 			{
-				if (rand() % 4 == 0)
-					return new CSkeleton(GameServer(), Map(), this, SpawnPos);
+				if(DayTime == false)
+				{
+					if(rand()%4 == 0)
+						return new CSkeleton(GameServer(), Map(), this, SpawnPos);
+					else
+						return new CZombie(GameServer(), Map(), this, SpawnPos);
+				}
 				else
-					return new CZombie(GameServer(), Map(), this, SpawnPos);
+				{
+					return new CWildtee(GameServer(), Map(), this, SpawnPos);
+				}
+			}
+			else if(MapBiome == MAPBIOME_DESERT)
+			{
+				//return new CShadow(GameServer(), Map(), this, SpawnPos);
+				if(DayTime == false)
+				{
+					if(rand()%3 == 0)
+					{
+						if(rand()%3 == 0)
+							return new CShadow(GameServer(), Map(), this, SpawnPos);
+						else
+							return new CSkeleton(GameServer(), Map(), this, SpawnPos);
+					}
+					else
+						return new CZombie(GameServer(), Map(), this, SpawnPos);
+				}
+				else
+				{
+					return new CNomad(GameServer(), Map(), this, SpawnPos);
+				}
 			}
 			else
 			{
-				return new CWildtee(GameServer(), Map(), this, SpawnPos);
+				if (DayTime == false)
+				{
+					if (rand() % 4 == 0)
+						return new CSkeleton(GameServer(), Map(), this, SpawnPos);
+					else
+						return new CZombie(GameServer(), Map(), this, SpawnPos);
+				}
+				else
+				{
+					return new CWildtee(GameServer(), Map(), this, SpawnPos);
+				}
 			}
 		}
 	}
@@ -433,7 +447,7 @@ int CWorldSection::SpawnRandomMob(vec2 Pos, int ClientID)
 	{
 		if(GetRandomSpawnPosition(Pos, &SpawnPos))
 		{
-			CEnemyNpc *pNpc = DoSpawn(Map()->GetMapType(), Map()->GetMapBiome(), DayTime, SpawnPos);
+			CEnemyNpc *pNpc = DoSpawn(Map()->GetMapType(), Map()->GetMapBiome(), Map()->GetMapTicketLevel(), DayTime, SpawnPos);
 
 			if(pNpc)
 			{

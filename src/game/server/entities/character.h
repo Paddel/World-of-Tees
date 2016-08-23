@@ -94,6 +94,7 @@ public:
 	void WantBackport();
 	
 	CWeapon *HasWeapon(int Type);
+	CWeapon *CurrentWeapon();
 
 	void SetEmoteType(int EmoteType) { m_EmoteType = EmoteType; };
 	void SetEmoteStop(int EmoteStop) { m_EmoteStop = EmoteStop; };
@@ -203,6 +204,8 @@ private:
 	void DoRegeneration();
 
 	int64 m_BackportTime;
+
+	bool m_OnHealTile;
 };
 
 #endif

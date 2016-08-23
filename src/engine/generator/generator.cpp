@@ -1001,8 +1001,17 @@ void CGenerator::SetMapInfo(CGeneratingMap& GenMap)
 	GenMap.m_MapType = MAPTYPE_WILDNESS;//MAPTYPE_TOWN
 	GenMap.m_Eruption = ClampEruption(GenMap.m_PrevMapInfo.m_Eruption + (rand() % 3 - 1));
 
-	GenMap.m_Temperature = ClampTemp(GenMap.m_PrevMapInfo.m_Temperature + ((rand() % 11) - 5) * 6);
-	GenMap.m_Moisture = ClampMoisture(GenMap.m_PrevMapInfo.m_Moisture + ((rand() % 11) - 5) * 6);
+	if(GenMap.m_TicketLevel > 0)
+	{
+		GenMap.m_Temperature = ClampTemp(GenMap.m_PrevMapInfo.m_Temperature + ((rand() % 11) - 5) * 6);
+		GenMap.m_Moisture = ClampMoisture(GenMap.m_PrevMapInfo.m_Moisture + ((rand() % 11) - 5) * 6);
+	}
+	else
+	{
+		GenMap.m_Temperature = GenMap.m_PrevMapInfo.m_Temperature;
+		GenMap.m_Moisture = GenMap.m_PrevMapInfo.m_Moisture;
+	}
+
 	GenMap.m_MapBiome = CalculateBiome(GenMap.m_Temperature, GenMap.m_Moisture);
 	GenMap.m_TicketLevel = GenMap.m_PrevMapInfo.m_TicketLevel;
 }
